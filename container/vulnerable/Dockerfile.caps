@@ -1,0 +1,4 @@
+# BENCH-CONTAINER-005
+FROM alpine:3.18
+RUN apk add --no-cache iproute2 tcpdump iptables net-tools
+ENTRYPOINT ["/bin/sh"]

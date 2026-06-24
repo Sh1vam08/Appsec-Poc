@@ -1,0 +1,11 @@
+name: Comment analyzer (Safe)
+on: issue_comment
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print comment title
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+        run: |
+          echo "Analyzing comment: $COMMENT_BODY"

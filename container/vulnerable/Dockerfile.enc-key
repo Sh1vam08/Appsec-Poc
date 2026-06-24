@@ -1,0 +1,3 @@
+# BENCH-SECRET-025
+FROM alpine:3.18
+ENV DECRYPTION_KEY="MySuperSecretEncryptionKey321"

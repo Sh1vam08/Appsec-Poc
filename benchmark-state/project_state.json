@@ -1,0 +1,43 @@
+{
+  "project": {
+    "name": "Enterprise AppSec Benchmark Suite",
+    "version": "1.0.0",
+    "description": "Enterprise-grade Application Security Benchmark Suite for evaluating, comparing, and scoring AppSec platforms including SAST, SCA, DAST, IaC Security, Container Security, Secret Scanning, and AI Security Features.",
+    "created_at": "2026-06-23T11:30:00+05:30",
+    "last_updated": "2026-06-23T12:13:31.061797+00:00",
+    "current_phase": 10,
+    "current_phase_status": "COMPLETED",
+    "total_phases": 10,
+    "technology_stack": {
+      "language": "Java 17",
+      "framework": "Spring Boot 3.2.x",
+      "build_tool": "Maven 3.9.x",
+      "containerization": "Docker",
+      "orchestration": "Kubernetes",
+      "iac": "Terraform 1.7.x",
+      "ci_cd": [
+        "GitHub Actions",
+        "Jenkins"
+      ],
+      "database": "H2 (embedded for benchmark portability)"
+    },
+    "target_scenarios": {
+      "sast": 80,
+      "sca": 40,
+      "secrets": 30,
+      "container": 20,
+      "iac": 20,
+      "dast": 20,
+      "total": 210
+    },
+    "repository_root": ".",
+    "state_directory": "benchmark-state",
+    "source_directory": "src",
+    "iac_directory": "iac",
+    "container_directory": "container",
+    "cicd_directory": "cicd",
+    "docs_directory": "docs"
+  },
+  "schema_version": "1.0.0",
+  "schema_locked": true
+}

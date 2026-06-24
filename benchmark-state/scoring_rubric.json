@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "last_updated": "2026-06-23T17:35:00+05:30",
+  "description": "Weighted scoring rubric for the Enterprise AppSec Benchmark Suite. Defines category weights, metric weights, grade thresholds, and penalty rules.",
+  "weights": {
+    "core_detection": 0.60,
+    "severity_accuracy": 0.15,
+    "coverage_breadth": 0.15,
+    "ai_capabilities": 0.10
+  },
+  "core_detection_breakdown": {
+    "f1_score": 0.40,
+    "recall": 0.30,
+    "precision": 0.20,
+    "inverse_fpr": 0.10
+  },
+  "category_weights": {
+    "SAST": {
+      "weight": 0.30,
+      "description": "Static Application Security Testing - largest scenario pool (80 benchmarks), critical for development-time detection"
+    },
+    "DAST": {
+      "weight": 0.15,
+      "description": "Dynamic Application Security Testing - runtime vulnerability detection (20 benchmarks)"
+    },
+    "SCA": {
+      "weight": 0.20,
+      "description": "Software Composition Analysis - supply chain security (40 benchmarks)"
+    },
+    "SECRET": {
+      "weight": 0.10,
+      "description": "Secret Scanning - credential and API key detection (30 benchmarks)"
+    },
+    "CONTAINER": {
+      "weight": 0.10,
+      "description": "Container Security - Dockerfile and image misconfiguration detection (20 benchmarks)"
+    },
+    "IAC": {
+      "weight": 0.10,
+      "description": "Infrastructure as Code Security - Terraform, Kubernetes, Helm misconfigurations (20 benchmarks)"
+    },
+    "CICD": {
+      "weight": 0.05,
+      "description": "CI/CD Pipeline Security - GitHub Actions and Jenkins pipeline misconfigurations (10 benchmarks)"
+    }
+  },
+  "grade_thresholds": {
+    "A+": 95,
+    "A": 90,
+    "A-": 85,
+    "B+": 80,
+    "B": 75,
+    "B-": 70,
+    "C+": 65,
+    "C": 60,
+    "D": 50,
+    "F": 0
+  },
+  "grade_descriptions": {
+    "A+": "Exceptional - Best-in-class detection with near-zero false positives and strong AI capabilities",
+    "A": "Excellent - Comprehensive detection across all categories with very low noise",
+    "A-": "Very Good - Strong detection with minor gaps in some categories",
+    "B+": "Good - Solid detection but notable false positive or false negative patterns",
+    "B": "Above Average - Reliable core detection but gaps in advanced categories",
+    "B-": "Adequate - Functional detection but significant room for improvement",
+    "C+": "Below Average - Misses many findings or generates excessive noise",
+    "C": "Poor - Significant detection gaps across multiple categories",
+    "D": "Very Poor - Major deficiencies in detection capability",
+    "F": "Failing - Does not meet minimum benchmarks for production use"
+  },
+  "penalty_rules": {
+    "critical_miss_penalty": {
+      "description": "Penalty applied when a HIGH or CRITICAL severity vulnerability is missed (FN)",
+      "penalty_per_miss": 0.5,
+      "max_penalty": 10.0
+    },
+    "excessive_fp_penalty": {
+      "description": "Penalty when false positive rate exceeds threshold",
+      "fpr_threshold": 0.20,
+      "penalty_per_percent_over": 0.3,
+      "max_penalty": 5.0
+    },
+    "category_zero_penalty": {
+      "description": "Penalty when a vendor scores zero in an entire category",
+      "penalty_per_category": 3.0,
+      "max_penalty": 15.0
+    }
+  },
+  "benchmark_difficulty_multipliers": {
+    "description": "Multipliers applied to benchmark difficulty levels when computing weighted scores",
+    "EASY": 1.0,
+    "MEDIUM": 1.2,
+    "HARD": 1.5,
+    "EXPERT": 2.0
+  },
+  "minimum_viable_thresholds": {
+    "description": "Minimum thresholds a vendor must meet to be considered production-ready",
+    "precision": 0.60,
+    "recall": 0.50,
+    "f1_score": 0.55,
+    "false_positive_rate_max": 0.30,
+    "categories_covered_min": 4
+  },
+  "ai_capability_weights": {
+    "fix_generation": 0.25,
+    "remediation_guidance": 0.20,
+    "root_cause_analysis": 0.20,
+    "reachability_analysis": 0.15,
+    "prioritization": 0.10,
+    "risk_ranking": 0.10
+  }
+}

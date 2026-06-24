@@ -1,0 +1,5 @@
+# BENCH-CONTAINER-001
+FROM alpine:3.18
+RUN apk add --no-cache curl
+# Running as default root user
+ENTRYPOINT ["curl"]

@@ -1,0 +1,7 @@
+# BENCH-CONTAINER-004
+FROM ubuntu:22.04
+RUN useradd -m appuser
+# Remove SUID/SGID bits to prevent any privilege escalation attempts
+RUN find / -xdev -perm /6000 -type f -exec chmod a-s {} \; || true
+USER appuser
+ENTRYPOINT ["/bin/bash"]

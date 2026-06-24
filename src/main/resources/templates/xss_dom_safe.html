@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM XSS - Safe</title>
+</head>
+<body>
+    <h1>DOM XSS Demonstration (Safe)</h1>
+    <div id="output-container">
+        <h3>Output:</h3>
+        <div id="output">Placeholder</div>
+    </div>
+
+    <script>
+        // BENCH-SAST-038: DOM XSS Safe Sink
+        // Source: window.location.search parameter
+        // Sink: Element.textContent assignment (automatically sanitizes HTML tags)
+        const urlParams = new URLSearchParams(window.location.search);
+        const userInput = urlParams.get('input') || '';
+        document.getElementById('output').textContent = userInput;
+    </script>
+</body>
+</html>

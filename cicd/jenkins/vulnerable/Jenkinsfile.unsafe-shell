@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    parameters {
+        string(name: 'BRANCH_NAME', defaultValue: 'main', description: 'Branch to build')
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                // Vulnerable to command injection since BRANCH_NAME parameter is interpolated directly inside Groovy double quotes
+                sh "git checkout ${params.BRANCH_NAME}"
+            }
+        }
+    }
+}

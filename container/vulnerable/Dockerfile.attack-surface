@@ -1,0 +1,4 @@
+# BENCH-CONTAINER-013
+FROM alpine:3.18
+RUN apk add --no-cache build-base python3 nodejs git curl wget bash
+ENTRYPOINT ["/bin/sh"]

@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  benchmark-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: appsec-benchmark:1.0.0-BENCHMARK
+    container_name: appsec-benchmark-suite
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+    restart: unless-stopped

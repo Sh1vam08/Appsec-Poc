@@ -1,0 +1,6 @@
+# BENCH-CONTAINER-019
+FROM alpine:3.18
+RUN mkdir /config
+RUN echo '{"database_url": "jdbc:mysql://localhost:3306/mydb"}' > /config/app-config.json
+RUN chmod 777 /config/app-config.json
+ENTRYPOINT ["/bin/sh"]

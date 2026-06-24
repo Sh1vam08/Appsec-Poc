@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0.0",
+  "last_updated": "2026-06-23T17:35:00+05:30",
+  "description": "Report templates defining the structure, sections, and rendering metadata for all benchmark reports.",
+  "templates": {
+    "vendor_evaluation": {
+      "template_id": "TPL-VENDOR-EVAL-001",
+      "name": "Vendor Evaluation Report",
+      "description": "Comprehensive single-vendor evaluation report with all KPIs, breakdown by category, CWE, and AI capabilities.",
+      "output_formats": ["markdown", "json", "html", "pdf"],
+      "sections": [
+        {
+          "id": "executive_summary",
+          "title": "Executive Summary",
+          "required": true,
+          "description": "High-level overview with composite score, grade, and key findings",
+          "data_sources": ["summary", "confusion_matrix"],
+          "fields": [
+            "composite_score", "grade", "precision", "recall", "accuracy",
+            "f1_score", "false_positive_rate", "severity_accuracy"
+          ]
+        },
+        {
+          "id": "confusion_matrix",
+          "title": "Confusion Matrix",
+          "required": true,
+          "description": "True/False Positive/Negative counts and rates",
+          "data_sources": ["confusion_matrix"],
+          "visualization": "heatmap",
+          "fields": [
+            "true_positives", "true_negatives", "false_positives", "false_negatives"
+          ]
+        },
+        {
+          "id": "category_breakdown",
+          "title": "Category Breakdown",
+          "required": true,
+          "description": "Per-category (SAST, DAST, SCA, etc.) KPI breakdown",
+          "data_sources": ["category_breakdown"],
+          "visualization": "grouped_bar_chart",
+          "fields": [
+            "precision", "recall", "f1_score", "false_positive_rate", "total_benchmarks"
+          ]
+        },
+        {
+          "id": "cwe_breakdown",
+          "title": "CWE Breakdown",
+          "required": false,
+          "description": "Per-CWE vulnerability type KPI breakdown",
+          "data_sources": ["cwe_breakdown"],
+          "visualization": "treemap",
+          "fields": [
+            "precision", "recall", "f1_score", "total_benchmarks"
+          ]
+        },
+        {
+          "id": "ai_capabilities",
+          "title": "AI Capability Assessment",
+          "required": false,
+          "description": "Evaluation of AI-powered features (fix generation, root cause, reachability)",
+          "data_sources": ["ai_capability_scores"],
+          "visualization": "radar_chart",
+          "fields": [
+            "fix_generation", "remediation_guidance", "root_cause_analysis",
+            "reachability_analysis", "prioritization", "risk_ranking"
+          ]
+        },
+        {
+          "id": "severity_analysis",
+          "title": "Severity Classification Analysis",
+          "required": false,
+          "description": "How accurately the vendor classifies vulnerability severity",
+          "data_sources": ["benchmark_results"],
+          "visualization": "stacked_bar",
+          "fields": [
+            "severity_match", "severity_accuracy"
+          ]
+        },
+        {
+          "id": "benchmark_details",
+          "title": "Detailed Benchmark Results",
+          "required": false,
+          "description": "Per-benchmark pass/fail results with classification details",
+          "data_sources": ["benchmark_results"],
+          "visualization": "data_table",
+          "fields": [
+            "benchmark_id", "category", "cwe", "expected_detection",
+            "actual_detected", "classification", "severity_match"
+          ]
+        },
+        {
+          "id": "recommendations",
+          "title": "Recommendations",
+          "required": true,
+          "description": "Actionable recommendations based on findings",
+          "data_sources": ["summary", "category_breakdown"],
+          "auto_generated": true
+        }
+      ]
+    },
+    "vendor_comparison": {
+      "template_id": "TPL-VENDOR-COMP-001",
+      "name": "Multi-Vendor Comparison Report",
+      "description": "Side-by-side comparison of multiple vendors across all KPI dimensions.",
+      "output_formats": ["markdown", "json", "html"],
+      "sections": [
+        {
+          "id": "rankings",
+          "title": "Overall Rankings",
+          "required": true,
+          "description": "Vendors ranked by composite score",
+          "visualization": "ranked_table"
+        },
+        {
+          "id": "metric_comparison",
+          "title": "Metric-by-Metric Comparison",
+          "required": true,
+          "description": "All core metrics compared across vendors",
+          "visualization": "comparison_table"
+        },
+        {
+          "id": "category_rankings",
+          "title": "Category-Level Rankings",
+          "required": true,
+          "description": "Per-category vendor rankings (SAST, DAST, SCA, etc.)",
+          "visualization": "grouped_bar_chart"
+        },
+        {
+          "id": "strength_weakness",
+          "title": "Strengths & Weaknesses Matrix",
+          "required": false,
+          "description": "Best/worst performing categories per vendor",
+          "visualization": "matrix_heatmap"
+        },
+        {
+          "id": "price_performance",
+          "title": "Price-Performance Analysis",
+          "required": false,
+          "description": "Optional section when pricing data is available",
+          "visualization": "scatter_plot",
+          "requires_input": "pricing_data"
+        }
+      ]
+    },
+    "executive_dashboard": {
+      "template_id": "TPL-EXEC-DASH-001",
+      "name": "Executive Dashboard",
+      "description": "High-level dashboard data optimized for executive stakeholder consumption.",
+      "output_formats": ["json"],
+      "sections": [
+        {
+          "id": "score_card",
+          "title": "Score Card",
+          "visualization": "kpi_cards",
+          "fields": ["composite_score", "grade", "precision", "recall"]
+        },
+        {
+          "id": "category_radar",
+          "title": "Category Coverage Radar",
+          "visualization": "radar_chart",
+          "fields": ["category_f1_scores"]
+        },
+        {
+          "id": "trend_line",
+          "title": "Score Trend",
+          "visualization": "line_chart",
+          "fields": ["historical_scores"],
+          "note": "Requires multiple evaluation runs over time"
+        },
+        {
+          "id": "risk_heatmap",
+          "title": "Risk Heatmap",
+          "visualization": "heatmap",
+          "fields": ["false_negative_rate_by_severity"]
+        }
+      ]
+    }
+  }
+}

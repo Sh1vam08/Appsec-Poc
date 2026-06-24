@@ -1,0 +1,1988 @@
+{
+  "schema_version": "1.0.0",
+  "last_updated": "2026-06-24T09:58:00+05:30",
+  "summary": {
+    "total_planned": 214,
+    "total_completed": 214,
+    "total_in_progress": 0,
+    "total_pending": 0
+  },
+  "categories": {
+    "sast": {
+      "planned": 84,
+      "completed": 84,
+      "in_progress": 0,
+      "pending": 0,
+      "last_completed_id": "BENCH-SAST-084",
+      "next_pending_id": null
+    },
+    "sca": {
+      "planned": 40,
+      "completed": 40,
+      "in_progress": 0,
+      "pending": 0,
+      "last_completed_id": "BENCH-SCA-040",
+      "next_pending_id": null
+    },
+    "dast": {
+      "planned": 20,
+      "completed": 20,
+      "in_progress": 0,
+      "pending": 0,
+      "last_completed_id": "BENCH-DAST-020",
+      "next_pending_id": null
+    },
+    "secret": {
+      "planned": 30,
+      "completed": 30,
+      "in_progress": 0,
+      "pending": 0,
+      "last_completed_id": "BENCH-SECRET-030",
+      "next_pending_id": null
+    },
+    "container": {
+      "planned": 20,
+      "completed": 20,
+      "in_progress": 0,
+      "pending": 0,
+      "last_completed_id": "BENCH-CONTAINER-020",
+      "next_pending_id": null
+    },
+    "iac": {
+      "planned": 20,
+      "completed": 20,
+      "in_progress": 0,
+      "pending": 0,
+      "last_completed_id": "BENCH-IAC-020",
+      "next_pending_id": null
+    }
+  },
+  "items": [
+    {
+      "benchmark_id": "BENCH-SAST-001",
+      "category": "SAST",
+      "subcategory": "SQL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-002",
+      "category": "SAST",
+      "subcategory": "SQL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-003",
+      "category": "SAST",
+      "subcategory": "SQL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-004",
+      "category": "SAST",
+      "subcategory": "SQL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-005",
+      "category": "SAST",
+      "subcategory": "NoSQL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-006",
+      "category": "SAST",
+      "subcategory": "NoSQL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-007",
+      "category": "SAST",
+      "subcategory": "NoSQL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-008",
+      "category": "SAST",
+      "subcategory": "NoSQL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-009",
+      "category": "SAST",
+      "subcategory": "Command Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-010",
+      "category": "SAST",
+      "subcategory": "Command Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-011",
+      "category": "SAST",
+      "subcategory": "Command Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-012",
+      "category": "SAST",
+      "subcategory": "Command Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-013",
+      "category": "SAST",
+      "subcategory": "LDAP Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-014",
+      "category": "SAST",
+      "subcategory": "LDAP Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-015",
+      "category": "SAST",
+      "subcategory": "LDAP Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-016",
+      "category": "SAST",
+      "subcategory": "LDAP Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-017",
+      "category": "SAST",
+      "subcategory": "XPath Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-018",
+      "category": "SAST",
+      "subcategory": "XPath Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-019",
+      "category": "SAST",
+      "subcategory": "XPath Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-020",
+      "category": "SAST",
+      "subcategory": "XPath Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-021",
+      "category": "SAST",
+      "subcategory": "XXE",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-022",
+      "category": "SAST",
+      "subcategory": "XXE",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-023",
+      "category": "SAST",
+      "subcategory": "XXE",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-024",
+      "category": "SAST",
+      "subcategory": "XXE",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-025",
+      "category": "SAST",
+      "subcategory": "SpEL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-026",
+      "category": "SAST",
+      "subcategory": "SpEL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-027",
+      "category": "SAST",
+      "subcategory": "SpEL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-028",
+      "category": "SAST",
+      "subcategory": "SpEL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-029",
+      "category": "SAST",
+      "subcategory": "Stored XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-030",
+      "category": "SAST",
+      "subcategory": "Stored XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-031",
+      "category": "SAST",
+      "subcategory": "Stored XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-032",
+      "category": "SAST",
+      "subcategory": "Stored XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-033",
+      "category": "SAST",
+      "subcategory": "Reflected XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-034",
+      "category": "SAST",
+      "subcategory": "Reflected XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-035",
+      "category": "SAST",
+      "subcategory": "Reflected XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-036",
+      "category": "SAST",
+      "subcategory": "Reflected XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-037",
+      "category": "SAST",
+      "subcategory": "DOM-based XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-038",
+      "category": "SAST",
+      "subcategory": "DOM-based XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-039",
+      "category": "SAST",
+      "subcategory": "DOM-based XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-040",
+      "category": "SAST",
+      "subcategory": "DOM-based XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-041",
+      "category": "SAST",
+      "subcategory": "SSRF",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-042",
+      "category": "SAST",
+      "subcategory": "SSRF",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-043",
+      "category": "SAST",
+      "subcategory": "SSRF",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-044",
+      "category": "SAST",
+      "subcategory": "SSRF",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-045",
+      "category": "SAST",
+      "subcategory": "Open Redirect",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-046",
+      "category": "SAST",
+      "subcategory": "Open Redirect",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-047",
+      "category": "SAST",
+      "subcategory": "Open Redirect",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-048",
+      "category": "SAST",
+      "subcategory": "Open Redirect",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-049",
+      "category": "SAST",
+      "subcategory": "Path Traversal",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-050",
+      "category": "SAST",
+      "subcategory": "Path Traversal",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-051",
+      "category": "SAST",
+      "subcategory": "Path Traversal",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-052",
+      "category": "SAST",
+      "subcategory": "Path Traversal",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-053",
+      "category": "SAST",
+      "subcategory": "Unsafe Deserialization",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-054",
+      "category": "SAST",
+      "subcategory": "Unsafe Deserialization",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-055",
+      "category": "SAST",
+      "subcategory": "Unsafe Deserialization",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-056",
+      "category": "SAST",
+      "subcategory": "Unsafe Deserialization",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-057",
+      "category": "SAST",
+      "subcategory": "Unsafe Reflection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-058",
+      "category": "SAST",
+      "subcategory": "Unsafe Reflection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-059",
+      "category": "SAST",
+      "subcategory": "Unsafe Reflection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-060",
+      "category": "SAST",
+      "subcategory": "Unsafe Reflection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-061",
+      "category": "SAST",
+      "subcategory": "Broken Authentication",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-062",
+      "category": "SAST",
+      "subcategory": "Broken Authentication",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-063",
+      "category": "SAST",
+      "subcategory": "Broken Authentication",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-064",
+      "category": "SAST",
+      "subcategory": "Broken Authentication",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-065",
+      "category": "SAST",
+      "subcategory": "Broken Authorization",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-066",
+      "category": "SAST",
+      "subcategory": "Broken Authorization",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-067",
+      "category": "SAST",
+      "subcategory": "Broken Authorization",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-068",
+      "category": "SAST",
+      "subcategory": "Broken Authorization",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-069",
+      "category": "SAST",
+      "subcategory": "Weak Cryptography",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-070",
+      "category": "SAST",
+      "subcategory": "Weak Cryptography",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-071",
+      "category": "SAST",
+      "subcategory": "Weak Cryptography",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-072",
+      "category": "SAST",
+      "subcategory": "Weak Cryptography",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-073",
+      "category": "SAST",
+      "subcategory": "Hardcoded Credentials",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-074",
+      "category": "SAST",
+      "subcategory": "Hardcoded Credentials",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-075",
+      "category": "SAST",
+      "subcategory": "Hardcoded Credentials",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-076",
+      "category": "SAST",
+      "subcategory": "Hardcoded Credentials",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-077",
+      "category": "SAST",
+      "subcategory": "Sensitive Data Exposure",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-078",
+      "category": "SAST",
+      "subcategory": "Sensitive Data Exposure",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-079",
+      "category": "SAST",
+      "subcategory": "Sensitive Data Exposure",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-080",
+      "category": "SAST",
+      "subcategory": "Sensitive Data Exposure",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-081",
+      "category": "SAST",
+      "subcategory": "SCA Core Check",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-082",
+      "category": "SAST",
+      "subcategory": "SCA Core Check",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-083",
+      "category": "SAST",
+      "subcategory": "SCA Core Check",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-084",
+      "category": "SAST",
+      "subcategory": "SCA Core Check",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-001",
+      "category": "SCA",
+      "subcategory": "Log4j Core (direct-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-002",
+      "category": "SCA",
+      "subcategory": "Jackson Databind (direct-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-003",
+      "category": "SCA",
+      "subcategory": "SnakeYAML (direct-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-004",
+      "category": "SCA",
+      "subcategory": "Commons Collections (direct-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-005",
+      "category": "SCA",
+      "subcategory": "Spring Core (direct-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-006",
+      "category": "SCA",
+      "subcategory": "Apache Commons Text (direct-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-007",
+      "category": "SCA",
+      "subcategory": "Apache HttpClient (direct-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-008",
+      "category": "SCA",
+      "subcategory": "Bouncy Castle (direct-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-009",
+      "category": "SCA",
+      "subcategory": "Hibernate Validator (direct-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-010",
+      "category": "SCA",
+      "subcategory": "Guava (direct-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-011",
+      "category": "SCA",
+      "subcategory": "Log4j Core (direct-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-012",
+      "category": "SCA",
+      "subcategory": "Jackson Databind (direct-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-013",
+      "category": "SCA",
+      "subcategory": "SnakeYAML (direct-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-014",
+      "category": "SCA",
+      "subcategory": "Commons Collections (direct-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-015",
+      "category": "SCA",
+      "subcategory": "Spring Core (direct-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-016",
+      "category": "SCA",
+      "subcategory": "Apache Commons Text (direct-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-017",
+      "category": "SCA",
+      "subcategory": "Apache HttpClient (direct-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-018",
+      "category": "SCA",
+      "subcategory": "Bouncy Castle (direct-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-019",
+      "category": "SCA",
+      "subcategory": "Hibernate Validator (direct-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-020",
+      "category": "SCA",
+      "subcategory": "Guava (direct-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-021",
+      "category": "SCA",
+      "subcategory": "Log4j Core (transitive-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-022",
+      "category": "SCA",
+      "subcategory": "Jackson Databind (transitive-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-023",
+      "category": "SCA",
+      "subcategory": "SnakeYAML (transitive-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-024",
+      "category": "SCA",
+      "subcategory": "Commons Collections (transitive-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-025",
+      "category": "SCA",
+      "subcategory": "Spring Core (transitive-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-026",
+      "category": "SCA",
+      "subcategory": "Apache Commons Text (transitive-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-027",
+      "category": "SCA",
+      "subcategory": "Apache HttpClient (transitive-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-028",
+      "category": "SCA",
+      "subcategory": "Bouncy Castle (transitive-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-029",
+      "category": "SCA",
+      "subcategory": "Hibernate Validator (transitive-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-030",
+      "category": "SCA",
+      "subcategory": "Guava (transitive-reachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-031",
+      "category": "SCA",
+      "subcategory": "Log4j Core (transitive-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-032",
+      "category": "SCA",
+      "subcategory": "Jackson Databind (transitive-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-033",
+      "category": "SCA",
+      "subcategory": "SnakeYAML (transitive-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-034",
+      "category": "SCA",
+      "subcategory": "Commons Collections (transitive-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-035",
+      "category": "SCA",
+      "subcategory": "Spring Core (transitive-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-036",
+      "category": "SCA",
+      "subcategory": "Apache Commons Text (transitive-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-037",
+      "category": "SCA",
+      "subcategory": "Apache HttpClient (transitive-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-038",
+      "category": "SCA",
+      "subcategory": "Bouncy Castle (transitive-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-039",
+      "category": "SCA",
+      "subcategory": "Hibernate Validator (transitive-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-040",
+      "category": "SCA",
+      "subcategory": "Guava (transitive-unreachable)",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-001",
+      "category": "DAST",
+      "subcategory": "SQL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-002",
+      "category": "DAST",
+      "subcategory": "SQL Injection",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-003",
+      "category": "DAST",
+      "subcategory": "XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-004",
+      "category": "DAST",
+      "subcategory": "XSS",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-005",
+      "category": "DAST",
+      "subcategory": "CSRF",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-006",
+      "category": "DAST",
+      "subcategory": "CSRF",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-007",
+      "category": "DAST",
+      "subcategory": "SSRF",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-008",
+      "category": "DAST",
+      "subcategory": "SSRF",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-009",
+      "category": "DAST",
+      "subcategory": "Open Redirect",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-010",
+      "category": "DAST",
+      "subcategory": "Open Redirect",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-011",
+      "category": "DAST",
+      "subcategory": "Path Traversal",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-012",
+      "category": "DAST",
+      "subcategory": "Path Traversal",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-013",
+      "category": "DAST",
+      "subcategory": "File Upload",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-014",
+      "category": "DAST",
+      "subcategory": "File Upload",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-015",
+      "category": "DAST",
+      "subcategory": "Authentication Weakness",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-016",
+      "category": "DAST",
+      "subcategory": "Authentication Weakness",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-017",
+      "category": "DAST",
+      "subcategory": "Authorization Weakness",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-018",
+      "category": "DAST",
+      "subcategory": "Authorization Weakness",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-019",
+      "category": "DAST",
+      "subcategory": "API Security",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-020",
+      "category": "DAST",
+      "subcategory": "API Security",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-001",
+      "category": "SECRET",
+      "subcategory": "AWS Access Key in Source",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-002",
+      "category": "SECRET",
+      "subcategory": "AWS Secret Key in Source",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-003",
+      "category": "SECRET",
+      "subcategory": "GitHub Token in Source",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-004",
+      "category": "SECRET",
+      "subcategory": "GitLab Token in Source",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-005",
+      "category": "SECRET",
+      "subcategory": "Slack Token in Source",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-006",
+      "category": "SECRET",
+      "subcategory": "Azure Client Secret in Source",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-007",
+      "category": "SECRET",
+      "subcategory": "GCP Service Account Key in YAML",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-008",
+      "category": "SECRET",
+      "subcategory": "JWT Secret in YAML",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-009",
+      "category": "SECRET",
+      "subcategory": "Database Password in YAML",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-010",
+      "category": "SECRET",
+      "subcategory": "API Key in YAML",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-011",
+      "category": "SECRET",
+      "subcategory": "SSH Private Key in JSON",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-012",
+      "category": "SECRET",
+      "subcategory": "Certificate Private Key in JSON",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-013",
+      "category": "SECRET",
+      "subcategory": "OAuth Client Secret in JSON",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-014",
+      "category": "SECRET",
+      "subcategory": "DB Connection String in Properties",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-015",
+      "category": "SECRET",
+      "subcategory": "SMTP Password in Properties",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-016",
+      "category": "SECRET",
+      "subcategory": "Redis Password in Properties",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-017",
+      "category": "SECRET",
+      "subcategory": "AWS Credentials in Env",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-018",
+      "category": "SECRET",
+      "subcategory": "Stripe API Key in Env",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-019",
+      "category": "SECRET",
+      "subcategory": "Twilio Auth Token in Env",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-020",
+      "category": "SECRET",
+      "subcategory": "Cloud Provider Secret in Terraform",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-021",
+      "category": "SECRET",
+      "subcategory": "Private Key in Terraform",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-022",
+      "category": "SECRET",
+      "subcategory": "Access Token in Terraform",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-023",
+      "category": "SECRET",
+      "subcategory": "Registry Password in Dockerfile",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-024",
+      "category": "SECRET",
+      "subcategory": "API Credentials in Dockerfile",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-025",
+      "category": "SECRET",
+      "subcategory": "Encryption Key in Dockerfile",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-026",
+      "category": "SECRET",
+      "subcategory": "Deploy Key in CI/CD",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-027",
+      "category": "SECRET",
+      "subcategory": "NPM Token in CI/CD",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-028",
+      "category": "SECRET",
+      "subcategory": "Docker Hub Token in CI/CD",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-029",
+      "category": "SECRET",
+      "subcategory": "SSH Key in K8s Secret",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-030",
+      "category": "SECRET",
+      "subcategory": "TLS Key in K8s Secret",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-001",
+      "category": "CONTAINER",
+      "subcategory": "Root User",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-002",
+      "category": "CONTAINER",
+      "subcategory": "Root User",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-003",
+      "category": "CONTAINER",
+      "subcategory": "Privilege Escalation",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-004",
+      "category": "CONTAINER",
+      "subcategory": "Privilege Escalation",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-005",
+      "category": "CONTAINER",
+      "subcategory": "Dangerous Capabilities",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-006",
+      "category": "CONTAINER",
+      "subcategory": "Dangerous Capabilities",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-007",
+      "category": "CONTAINER",
+      "subcategory": "Outdated Base Image",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-008",
+      "category": "CONTAINER",
+      "subcategory": "Outdated Base Image",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-009",
+      "category": "CONTAINER",
+      "subcategory": "Exposed Secrets",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-010",
+      "category": "CONTAINER",
+      "subcategory": "Exposed Secrets",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-011",
+      "category": "CONTAINER",
+      "subcategory": "Weak Runtime Config",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-012",
+      "category": "CONTAINER",
+      "subcategory": "Weak Runtime Config",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-013",
+      "category": "CONTAINER",
+      "subcategory": "Excessive Attack Surface",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-014",
+      "category": "CONTAINER",
+      "subcategory": "Excessive Attack Surface",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-015",
+      "category": "CONTAINER",
+      "subcategory": "Missing Health Checks",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-016",
+      "category": "CONTAINER",
+      "subcategory": "Missing Health Checks",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-017",
+      "category": "CONTAINER",
+      "subcategory": "Package Vulnerabilities",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-018",
+      "category": "CONTAINER",
+      "subcategory": "Package Vulnerabilities",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-019",
+      "category": "CONTAINER",
+      "subcategory": "Weak File Permissions",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-020",
+      "category": "CONTAINER",
+      "subcategory": "Weak File Permissions",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-001",
+      "category": "IAC",
+      "subcategory": "Public S3 Bucket",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-002",
+      "category": "IAC",
+      "subcategory": "Public S3 Bucket",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-003",
+      "category": "IAC",
+      "subcategory": "Public Database",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-004",
+      "category": "IAC",
+      "subcategory": "Public Database",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-005",
+      "category": "IAC",
+      "subcategory": "Weak Security Groups",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-006",
+      "category": "IAC",
+      "subcategory": "Weak Security Groups",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-007",
+      "category": "IAC",
+      "subcategory": "Excessive IAM Permissions",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-008",
+      "category": "IAC",
+      "subcategory": "Excessive IAM Permissions",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-009",
+      "category": "IAC",
+      "subcategory": "Missing Encryption",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-010",
+      "category": "IAC",
+      "subcategory": "Missing Encryption",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-011",
+      "category": "IAC",
+      "subcategory": "Missing Logging",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-012",
+      "category": "IAC",
+      "subcategory": "Missing Logging",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-013",
+      "category": "IAC",
+      "subcategory": "Weak Network Segmentation",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-014",
+      "category": "IAC",
+      "subcategory": "Weak Network Segmentation",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-015",
+      "category": "IAC",
+      "subcategory": "Dangerous RBAC",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-016",
+      "category": "IAC",
+      "subcategory": "Dangerous RBAC",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-017",
+      "category": "IAC",
+      "subcategory": "Privileged Pods",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-018",
+      "category": "IAC",
+      "subcategory": "Privileged Pods",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-019",
+      "category": "IAC",
+      "subcategory": "HostPath Mounts",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-020",
+      "category": "IAC",
+      "subcategory": "HostPath Mounts",
+      "status": "ground_truth_registered",
+      "ground_truth_complete": true,
+      "code_implemented": true,
+      "verified": true
+    }
+  ]
+}

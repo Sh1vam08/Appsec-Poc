@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    parameters {
+        string(name: 'BRANCH_NAME', defaultValue: 'main', description: 'Branch to build')
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                // Safe against command injection since parameter is passed via environment variable and single quoted in shell execution
+                withEnv(["SAFE_BRANCH=${params.BRANCH_NAME}"]) {
+                    sh 'git checkout "$SAFE_BRANCH"'
+                }
+            }
+        }
+    }
+}

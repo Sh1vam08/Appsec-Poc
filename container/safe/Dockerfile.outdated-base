@@ -1,0 +1,3 @@
+# BENCH-CONTAINER-008
+FROM alpine:3.18
+ENTRYPOINT ["/bin/sh"]

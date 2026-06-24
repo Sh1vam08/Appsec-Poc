@@ -1,0 +1,7 @@
+{
+  "comment": "BENCH-SECRET-013",
+  "oauth_config": {
+    "client_id": "1234567890-client-id.apps.googleusercontent.com",
+    "client_secret": "4f738a92b8d0c1e3f5a7c9b2d4e6f8a0c2e4b6d8"
+  }
+}

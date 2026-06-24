@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('Install') {
+            steps {
+                // Safe build by using npm ci with specified private registry and locked dependencies
+                sh 'npm ci --registry=https://registry.mycompany.internal/'
+            }
+        }
+    }
+}

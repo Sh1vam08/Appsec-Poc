@@ -1,0 +1,7 @@
+# BENCH-CONTAINER-012
+FROM alpine:3.18
+RUN mkdir /app && addgroup -S appgroup && adduser -S appuser -G appgroup
+WORKDIR /app
+RUN chmod 555 /app
+USER appuser
+ENTRYPOINT ["/bin/sh"]

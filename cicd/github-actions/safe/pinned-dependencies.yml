@@ -1,0 +1,10 @@
+name: CI (Pinned dependencies)
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4.1.0
+      - uses: actions/setup-java@cd9a54c1630dc969a47ef7a92ac7e19f3f0dbd35 # v3.11.0
+        with:
+          java-version: '17'

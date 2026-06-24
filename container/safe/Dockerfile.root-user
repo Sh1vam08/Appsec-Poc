@@ -1,0 +1,7 @@
+# BENCH-CONTAINER-002
+FROM alpine:3.18
+RUN apk add --no-cache curl
+# Define custom group and user
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser
+ENTRYPOINT ["curl"]

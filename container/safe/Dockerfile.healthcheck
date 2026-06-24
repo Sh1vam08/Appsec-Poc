@@ -1,0 +1,6 @@
+# BENCH-CONTAINER-016
+FROM alpine:3.18
+RUN apk add --no-cache curl
+HEALTHCHECK --interval=5m --timeout=3s \
+  CMD curl -f http://localhost/ || exit 1
+ENTRYPOINT ["sleep", "3600"]

@@ -1,0 +1,3 @@
+# BENCH-CONTAINER-015
+FROM alpine:3.18
+ENTRYPOINT ["sleep", "3600"]

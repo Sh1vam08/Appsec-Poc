@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Stored XSS - Safe</title>
+</head>
+<body>
+    <h1>Stored XSS Demonstration (Safe)</h1>
+    <div class="comment-box">
+        <h3>Latest User Comment:</h3>
+        <!-- BENCH-SAST-030: Stored XSS Safe Sink -->
+        <!-- th:text automatically escapes special characters to prevent script injection -->
+        <p th:text="${comment}">Placeholder comment</p>
+    </div>
+</body>
+</html>

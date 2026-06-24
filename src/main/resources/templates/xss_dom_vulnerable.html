@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM XSS - Vulnerable</title>
+</head>
+<body>
+    <h1>DOM XSS Demonstration (Vulnerable)</h1>
+    <div id="output-container">
+        <h3>Output:</h3>
+        <div id="output">Placeholder</div>
+    </div>
+
+    <script>
+        // BENCH-SAST-037: DOM XSS Vulnerable Sink
+        // Source: window.location.search parameter
+        // Sink: Element.innerHTML assignment
+        const urlParams = new URLSearchParams(window.location.search);
+        const userInput = urlParams.get('input') || '';
+        document.getElementById('output').innerHTML = userInput;
+    </script>
+</body>
+</html>

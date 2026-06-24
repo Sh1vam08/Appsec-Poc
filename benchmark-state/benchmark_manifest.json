@@ -1,0 +1,3645 @@
+{
+  "schema_version": "1.0.0",
+  "last_updated": "2026-06-24T09:58:00+05:30",
+  "description": "Authoritative inventory of all benchmark assets.",
+  "manifests": [
+    {
+      "benchmark_id": "BENCH-SAST-001",
+      "phase": "SAST",
+      "category": "SQL Injection",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductCatalogController.java",
+      "endpoint": "/api/v1/products/search",
+      "capability_ids": [
+        "CAP-SAST-SQLI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SQLI-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-002",
+      "phase": "SAST",
+      "category": "SQL Injection",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductCatalogController.java",
+      "endpoint": "/api/v1/products/search/secure",
+      "capability_ids": [
+        "CAP-SAST-SQLI-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SQLI-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-003",
+      "phase": "SAST",
+      "category": "SQL Injection",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductCatalogController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-SQLI-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SQLI-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-004",
+      "phase": "SAST",
+      "category": "SQL Injection",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductCatalogController.java",
+      "endpoint": "/api/v1/products/search/jpa",
+      "capability_ids": [
+        "CAP-SAST-SQLI-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SQLI-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-005",
+      "phase": "SAST",
+      "category": "NoSQL Injection",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductFilterController.java",
+      "endpoint": "/api/v1/products/filter",
+      "capability_ids": [
+        "CAP-SAST-NOSQLI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-NOSQLI-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-006",
+      "phase": "SAST",
+      "category": "NoSQL Injection",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductFilterController.java",
+      "endpoint": "/api/v1/products/filter/secure",
+      "capability_ids": [
+        "CAP-SAST-NOSQLI-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-NOSQLI-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-007",
+      "phase": "SAST",
+      "category": "NoSQL Injection",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductFilterController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-NOSQLI-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-NOSQLI-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-008",
+      "phase": "SAST",
+      "category": "NoSQL Injection",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductFilterController.java",
+      "endpoint": "/api/v1/products/filter/jpa",
+      "capability_ids": [
+        "CAP-SAST-NOSQLI-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-NOSQLI-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-009",
+      "phase": "SAST",
+      "category": "Command Injection",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/catalog/ReportExportController.java",
+      "endpoint": "/api/v1/admin/reports/export",
+      "capability_ids": [
+        "CAP-SAST-CMDI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CMDI-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-010",
+      "phase": "SAST",
+      "category": "Command Injection",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/catalog/ReportExportController.java",
+      "endpoint": "/api/v1/admin/reports/export/secure",
+      "capability_ids": [
+        "CAP-SAST-CMDI-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CMDI-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-011",
+      "phase": "SAST",
+      "category": "Command Injection",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/catalog/ReportExportController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-CMDI-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CMDI-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-012",
+      "phase": "SAST",
+      "category": "Command Injection",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/catalog/ReportExportController.java",
+      "endpoint": "/api/v1/admin/reports/export/system",
+      "capability_ids": [
+        "CAP-SAST-CMDI-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CMDI-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-013",
+      "phase": "SAST",
+      "category": "LDAP Injection",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/catalog/UserDirectoryController.java",
+      "endpoint": "/api/v1/users/lookup",
+      "capability_ids": [
+        "CAP-SAST-LDAPI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-LDAPI-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-014",
+      "phase": "SAST",
+      "category": "LDAP Injection",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/catalog/UserDirectoryController.java",
+      "endpoint": "/api/v1/users/lookup/secure",
+      "capability_ids": [
+        "CAP-SAST-LDAPI-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-LDAPI-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-015",
+      "phase": "SAST",
+      "category": "LDAP Injection",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/catalog/UserDirectoryController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-LDAPI-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-LDAPI-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-016",
+      "phase": "SAST",
+      "category": "LDAP Injection",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/catalog/UserDirectoryController.java",
+      "endpoint": "/api/v1/users/lookup/jpa",
+      "capability_ids": [
+        "CAP-SAST-LDAPI-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-LDAPI-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-017",
+      "phase": "SAST",
+      "category": "XPath Injection",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/catalog/CatalogImportController.java",
+      "endpoint": "/api/v1/catalog/import",
+      "capability_ids": [
+        "CAP-SAST-XPATHI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-XPATHI-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-018",
+      "phase": "SAST",
+      "category": "XPath Injection",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/catalog/CatalogImportController.java",
+      "endpoint": "/api/v1/catalog/import/secure",
+      "capability_ids": [
+        "CAP-SAST-XPATHI-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-XPATHI-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-019",
+      "phase": "SAST",
+      "category": "XPath Injection",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/catalog/CatalogImportController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-XPATHI-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-XPATHI-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-020",
+      "phase": "SAST",
+      "category": "XPath Injection",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/catalog/CatalogImportController.java",
+      "endpoint": "/api/v1/catalog/import/dom",
+      "capability_ids": [
+        "CAP-SAST-XPATHI-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-XPATHI-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-021",
+      "phase": "SAST",
+      "category": "XXE",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/catalog/InventoryImportController.java",
+      "endpoint": "/api/v1/inventory/bulk-import",
+      "capability_ids": [
+        "CAP-SAST-XXE-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-XXE-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-022",
+      "phase": "SAST",
+      "category": "XXE",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/catalog/InventoryImportController.java",
+      "endpoint": "/api/v1/inventory/bulk-import/secure",
+      "capability_ids": [
+        "CAP-SAST-XXE-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-XXE-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-023",
+      "phase": "SAST",
+      "category": "XXE",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/catalog/InventoryImportController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-XXE-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-XXE-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-024",
+      "phase": "SAST",
+      "category": "XXE",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/catalog/InventoryImportController.java",
+      "endpoint": "/api/v1/inventory/bulk-import/json",
+      "capability_ids": [
+        "CAP-SAST-XXE-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-XXE-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-025",
+      "phase": "SAST",
+      "category": "SpEL Injection",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/catalog/PromoCodeController.java",
+      "endpoint": "/api/v1/promotions/apply",
+      "capability_ids": [
+        "CAP-SAST-SPEL-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SPEL-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-026",
+      "phase": "SAST",
+      "category": "SpEL Injection",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/catalog/PromoCodeController.java",
+      "endpoint": "/api/v1/promotions/apply/secure",
+      "capability_ids": [
+        "CAP-SAST-SPEL-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SPEL-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-027",
+      "phase": "SAST",
+      "category": "SpEL Injection",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/catalog/PromoCodeController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-SPEL-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SPEL-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-028",
+      "phase": "SAST",
+      "category": "SpEL Injection",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/catalog/PromoCodeController.java",
+      "endpoint": "/api/v1/promotions/apply/bind",
+      "capability_ids": [
+        "CAP-SAST-SPEL-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SPEL-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-029",
+      "phase": "SAST",
+      "category": "Stored XSS",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/review/ProductReviewController.java",
+      "endpoint": "/reviews/product",
+      "capability_ids": [
+        "CAP-SAST-XSS-STORED-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-STOREDXSS-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-030",
+      "phase": "SAST",
+      "category": "Stored XSS",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/review/ProductReviewController.java",
+      "endpoint": "/reviews/product/secure",
+      "capability_ids": [
+        "CAP-SAST-XSS-STORED-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-STOREDXSS-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-031",
+      "phase": "SAST",
+      "category": "Stored XSS",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/review/ProductReviewController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-XSS-STORED-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-STOREDXSS-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-032",
+      "phase": "SAST",
+      "category": "Stored XSS",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/review/ProductReviewController.java",
+      "endpoint": "/reviews/product/csp",
+      "capability_ids": [
+        "CAP-SAST-XSS-STORED-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-STOREDXSS-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-033",
+      "phase": "SAST",
+      "category": "Reflected XSS",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/review/SupportSearchController.java",
+      "endpoint": "/api/v1/support/query",
+      "capability_ids": [
+        "CAP-SAST-XSS-REFLECTED-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REFLXSS-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-034",
+      "phase": "SAST",
+      "category": "Reflected XSS",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/review/SupportSearchController.java",
+      "endpoint": "/api/v1/support/query/secure",
+      "capability_ids": [
+        "CAP-SAST-XSS-REFLECTED-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REFLXSS-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-035",
+      "phase": "SAST",
+      "category": "Reflected XSS",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/review/SupportSearchController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-XSS-REFLECTED-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REFLXSS-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-036",
+      "phase": "SAST",
+      "category": "Reflected XSS",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/review/SupportSearchController.java",
+      "endpoint": "/api/v1/support/query/json",
+      "capability_ids": [
+        "CAP-SAST-XSS-REFLECTED-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REFLXSS-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-037",
+      "phase": "SAST",
+      "category": "DOM-based XSS",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/review/ProfileDetailsController.java",
+      "endpoint": "/profile/details",
+      "capability_ids": [
+        "CAP-SAST-XSS-DOM-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DOMXSS-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-038",
+      "phase": "SAST",
+      "category": "DOM-based XSS",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/review/ProfileDetailsController.java",
+      "endpoint": "/profile/details/secure",
+      "capability_ids": [
+        "CAP-SAST-XSS-DOM-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DOMXSS-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-039",
+      "phase": "SAST",
+      "category": "DOM-based XSS",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/review/ProfileDetailsController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-XSS-DOM-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DOMXSS-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-040",
+      "phase": "SAST",
+      "category": "DOM-based XSS",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/review/ProfileDetailsController.java",
+      "endpoint": "/profile/details/angular",
+      "capability_ids": [
+        "CAP-SAST-XSS-DOM-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DOMXSS-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-041",
+      "phase": "SAST",
+      "category": "SSRF",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductImageImportController.java",
+      "endpoint": "/api/v1/products/image-import",
+      "capability_ids": [
+        "CAP-SAST-SSRF-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SSRF-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-042",
+      "phase": "SAST",
+      "category": "SSRF",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductImageImportController.java",
+      "endpoint": "/api/v1/products/image-import/secure",
+      "capability_ids": [
+        "CAP-SAST-SSRF-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SSRF-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-043",
+      "phase": "SAST",
+      "category": "SSRF",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductImageImportController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-SSRF-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SSRF-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-044",
+      "phase": "SAST",
+      "category": "SSRF",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductImageImportController.java",
+      "endpoint": "/api/v1/products/image-import/fixed",
+      "capability_ids": [
+        "CAP-SAST-SSRF-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SSRF-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-045",
+      "phase": "SAST",
+      "category": "Open Redirect",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/common/ShareRedirectController.java",
+      "endpoint": "/api/v1/share/redirect",
+      "capability_ids": [
+        "CAP-SAST-REDIRECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REDIRECT-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-046",
+      "phase": "SAST",
+      "category": "Open Redirect",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/common/ShareRedirectController.java",
+      "endpoint": "/api/v1/share/redirect/secure",
+      "capability_ids": [
+        "CAP-SAST-REDIRECT-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REDIRECT-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-047",
+      "phase": "SAST",
+      "category": "Open Redirect",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/common/ShareRedirectController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-REDIRECT-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REDIRECT-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-048",
+      "phase": "SAST",
+      "category": "Open Redirect",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/common/ShareRedirectController.java",
+      "endpoint": "/api/v1/share/redirect/relative",
+      "capability_ids": [
+        "CAP-SAST-REDIRECT-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REDIRECT-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-049",
+      "phase": "SAST",
+      "category": "Path Traversal",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/order/InvoiceDownloadController.java",
+      "endpoint": "/api/v1/orders/invoice/download",
+      "capability_ids": [
+        "CAP-SAST-TRAVERSAL-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-TRAVERSAL-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-050",
+      "phase": "SAST",
+      "category": "Path Traversal",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/order/InvoiceDownloadController.java",
+      "endpoint": "/api/v1/orders/invoice/download/secure",
+      "capability_ids": [
+        "CAP-SAST-TRAVERSAL-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-TRAVERSAL-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-051",
+      "phase": "SAST",
+      "category": "Path Traversal",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/order/InvoiceDownloadController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-TRAVERSAL-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-TRAVERSAL-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-052",
+      "phase": "SAST",
+      "category": "Path Traversal",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/order/InvoiceDownloadController.java",
+      "endpoint": "/api/v1/orders/invoice/download/resource",
+      "capability_ids": [
+        "CAP-SAST-TRAVERSAL-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-TRAVERSAL-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-053",
+      "phase": "SAST",
+      "category": "Unsafe Deserialization",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/common/SessionRestoreController.java",
+      "endpoint": "/api/v1/session/restore",
+      "capability_ids": [
+        "CAP-SAST-DESER-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DESER-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-054",
+      "phase": "SAST",
+      "category": "Unsafe Deserialization",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/common/SessionRestoreController.java",
+      "endpoint": "/api/v1/session/restore/secure",
+      "capability_ids": [
+        "CAP-SAST-DESER-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DESER-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-055",
+      "phase": "SAST",
+      "category": "Unsafe Deserialization",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/common/SessionRestoreController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-DESER-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DESER-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-056",
+      "phase": "SAST",
+      "category": "Unsafe Deserialization",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/common/SessionRestoreController.java",
+      "endpoint": "/api/v1/session/restore/json",
+      "capability_ids": [
+        "CAP-SAST-DESER-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DESER-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-057",
+      "phase": "SAST",
+      "category": "Unsafe Reflection",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/reporting/PluginManagerController.java",
+      "endpoint": "/api/v1/system/plugins/load",
+      "capability_ids": [
+        "CAP-SAST-REFLECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REFLECT-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-058",
+      "phase": "SAST",
+      "category": "Unsafe Reflection",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/reporting/PluginManagerController.java",
+      "endpoint": "/api/v1/system/plugins/load/secure",
+      "capability_ids": [
+        "CAP-SAST-REFLECT-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REFLECT-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-059",
+      "phase": "SAST",
+      "category": "Unsafe Reflection",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/reporting/PluginManagerController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-REFLECT-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REFLECT-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-060",
+      "phase": "SAST",
+      "category": "Unsafe Reflection",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/reporting/PluginManagerController.java",
+      "endpoint": "/api/v1/system/plugins/load/di",
+      "capability_ids": [
+        "CAP-SAST-REFLECT-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-REFLECT-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-061",
+      "phase": "SAST",
+      "category": "Broken Authentication",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/auth/UserAuthenticationController.java",
+      "endpoint": "/api/v1/auth/customer-login",
+      "capability_ids": [
+        "CAP-SAST-AUTH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-AUTH-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-062",
+      "phase": "SAST",
+      "category": "Broken Authentication",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/auth/UserAuthenticationController.java",
+      "endpoint": "/api/v1/auth/customer-login/secure",
+      "capability_ids": [
+        "CAP-SAST-AUTH-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-AUTH-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-063",
+      "phase": "SAST",
+      "category": "Broken Authentication",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/auth/UserAuthenticationController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-AUTH-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-AUTH-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-064",
+      "phase": "SAST",
+      "category": "Broken Authentication",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/auth/UserAuthenticationController.java",
+      "endpoint": "/api/v1/auth/customer-login/oauth",
+      "capability_ids": [
+        "CAP-SAST-AUTH-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-AUTH-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-065",
+      "phase": "SAST",
+      "category": "Broken Authorization",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/auth/OrderAccessController.java",
+      "endpoint": "/api/v1/orders/access",
+      "capability_ids": [
+        "CAP-SAST-AUTHZ-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-AUTHZ-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-066",
+      "phase": "SAST",
+      "category": "Broken Authorization",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/auth/OrderAccessController.java",
+      "endpoint": "/api/v1/orders/access/secure",
+      "capability_ids": [
+        "CAP-SAST-AUTHZ-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-AUTHZ-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-067",
+      "phase": "SAST",
+      "category": "Broken Authorization",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/auth/OrderAccessController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-AUTHZ-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-AUTHZ-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-068",
+      "phase": "SAST",
+      "category": "Broken Authorization",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/auth/OrderAccessController.java",
+      "endpoint": "/api/v1/orders/access/method",
+      "capability_ids": [
+        "CAP-SAST-AUTHZ-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-AUTHZ-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-069",
+      "phase": "SAST",
+      "category": "Weak Cryptography",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/payment/DataEncryptionController.java",
+      "endpoint": "/api/v1/payments/encrypt",
+      "capability_ids": [
+        "CAP-SAST-CRYPTO-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CRYPTO-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-070",
+      "phase": "SAST",
+      "category": "Weak Cryptography",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/payment/DataEncryptionController.java",
+      "endpoint": "/api/v1/payments/encrypt/secure",
+      "capability_ids": [
+        "CAP-SAST-CRYPTO-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CRYPTO-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-071",
+      "phase": "SAST",
+      "category": "Weak Cryptography",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/payment/DataEncryptionController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-CRYPTO-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CRYPTO-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-072",
+      "phase": "SAST",
+      "category": "Weak Cryptography",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/payment/DataEncryptionController.java",
+      "endpoint": "/api/v1/payments/encrypt/standard",
+      "capability_ids": [
+        "CAP-SAST-CRYPTO-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CRYPTO-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-073",
+      "phase": "SAST",
+      "category": "Hardcoded Credentials",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/payment/PaymentGatewayConfigController.java",
+      "endpoint": "/api/v1/payments/gateway/config",
+      "capability_ids": [
+        "CAP-SAST-CREDS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CREDS-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-074",
+      "phase": "SAST",
+      "category": "Hardcoded Credentials",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/payment/PaymentGatewayConfigController.java",
+      "endpoint": "/api/v1/payments/gateway/config/secure",
+      "capability_ids": [
+        "CAP-SAST-CREDS-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CREDS-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-075",
+      "phase": "SAST",
+      "category": "Hardcoded Credentials",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/payment/PaymentGatewayConfigController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-CREDS-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CREDS-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-076",
+      "phase": "SAST",
+      "category": "Hardcoded Credentials",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/payment/PaymentGatewayConfigController.java",
+      "endpoint": "/api/v1/payments/gateway/config/vault",
+      "capability_ids": [
+        "CAP-SAST-CREDS-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-CREDS-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-077",
+      "phase": "SAST",
+      "category": "Sensitive Data Exposure",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/profile/UserProfileController.java",
+      "endpoint": "/api/v1/profile/view",
+      "capability_ids": [
+        "CAP-SAST-DATA-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DATA-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-078",
+      "phase": "SAST",
+      "category": "Sensitive Data Exposure",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/profile/UserProfileController.java",
+      "endpoint": "/api/v1/profile/view/secure",
+      "capability_ids": [
+        "CAP-SAST-DATA-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DATA-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-079",
+      "phase": "SAST",
+      "category": "Sensitive Data Exposure",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/profile/UserProfileController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-DATA-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DATA-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-080",
+      "phase": "SAST",
+      "category": "Sensitive Data Exposure",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/profile/UserProfileController.java",
+      "endpoint": "/api/v1/profile/view/projection",
+      "capability_ids": [
+        "CAP-SAST-DATA-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-DATA-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-081",
+      "phase": "SAST",
+      "category": "SCA Core Check",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/system/SystemDiagnosticsController.java",
+      "endpoint": "/api/v1/system/update/check",
+      "capability_ids": [
+        "CAP-SAST-SCA-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SCA-001",
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-082",
+      "phase": "SAST",
+      "category": "SCA Core Check",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/system/SystemDiagnosticsController.java",
+      "endpoint": "/api/v1/system/update/check/secure",
+      "capability_ids": [
+        "CAP-SAST-SCA-002"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SCA-001",
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-083",
+      "phase": "SAST",
+      "category": "SCA Core Check",
+      "subcategory": "unreachable",
+      "file_path": "src/main/java/com/shopsphere/system/SystemDiagnosticsController.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SAST-SCA-003"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SCA-001",
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SAST-084",
+      "phase": "SAST",
+      "category": "SCA Core Check",
+      "subcategory": "framework-protected",
+      "file_path": "src/main/java/com/shopsphere/system/SystemDiagnosticsController.java",
+      "endpoint": "/api/v1/framework-protected/sca",
+      "capability_ids": [
+        "CAP-SAST-SCA-004"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": "CTRL-SAST-SCA-001",
+      "variant": "framework-protected"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-001",
+      "phase": "SCA",
+      "category": "Log4j Core",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/log4j-core",
+      "capability_ids": [
+        "CAP-SCA-DIRECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-002",
+      "phase": "SCA",
+      "category": "Jackson Databind",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/jackson-databind",
+      "capability_ids": [
+        "CAP-SCA-DIRECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-003",
+      "phase": "SCA",
+      "category": "SnakeYAML",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/snakeyaml",
+      "capability_ids": [
+        "CAP-SCA-DIRECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-004",
+      "phase": "SCA",
+      "category": "Commons Collections",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/commons-collections",
+      "capability_ids": [
+        "CAP-SCA-DIRECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-005",
+      "phase": "SCA",
+      "category": "Spring Core",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/spring-core",
+      "capability_ids": [
+        "CAP-SCA-DIRECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-006",
+      "phase": "SCA",
+      "category": "Apache Commons Text",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/commons-text",
+      "capability_ids": [
+        "CAP-SCA-DIRECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-007",
+      "phase": "SCA",
+      "category": "Apache HttpClient",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/httpclient",
+      "capability_ids": [
+        "CAP-SCA-DIRECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-008",
+      "phase": "SCA",
+      "category": "Bouncy Castle",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/bcprov-jdk15on",
+      "capability_ids": [
+        "CAP-SCA-DIRECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-009",
+      "phase": "SCA",
+      "category": "Hibernate Validator",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/hibernate-validator",
+      "capability_ids": [
+        "CAP-SCA-DIRECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-010",
+      "phase": "SCA",
+      "category": "Guava",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/guava",
+      "capability_ids": [
+        "CAP-SCA-DIRECT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-011",
+      "phase": "SCA",
+      "category": "Log4j Core",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-012",
+      "phase": "SCA",
+      "category": "Jackson Databind",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-013",
+      "phase": "SCA",
+      "category": "SnakeYAML",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-014",
+      "phase": "SCA",
+      "category": "Commons Collections",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-015",
+      "phase": "SCA",
+      "category": "Spring Core",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-016",
+      "phase": "SCA",
+      "category": "Apache Commons Text",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-017",
+      "phase": "SCA",
+      "category": "Apache HttpClient",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-018",
+      "phase": "SCA",
+      "category": "Bouncy Castle",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-019",
+      "phase": "SCA",
+      "category": "Hibernate Validator",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-020",
+      "phase": "SCA",
+      "category": "Guava",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-021",
+      "phase": "SCA",
+      "category": "Log4j Core",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/log4j-core",
+      "capability_ids": [
+        "CAP-SCA-TRANS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-022",
+      "phase": "SCA",
+      "category": "Jackson Databind",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/jackson-databind",
+      "capability_ids": [
+        "CAP-SCA-TRANS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-023",
+      "phase": "SCA",
+      "category": "SnakeYAML",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/snakeyaml",
+      "capability_ids": [
+        "CAP-SCA-TRANS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-024",
+      "phase": "SCA",
+      "category": "Commons Collections",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/commons-collections",
+      "capability_ids": [
+        "CAP-SCA-TRANS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-025",
+      "phase": "SCA",
+      "category": "Spring Core",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/spring-core",
+      "capability_ids": [
+        "CAP-SCA-TRANS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-026",
+      "phase": "SCA",
+      "category": "Apache Commons Text",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/commons-text",
+      "capability_ids": [
+        "CAP-SCA-TRANS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-027",
+      "phase": "SCA",
+      "category": "Apache HttpClient",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/httpclient",
+      "capability_ids": [
+        "CAP-SCA-TRANS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-028",
+      "phase": "SCA",
+      "category": "Bouncy Castle",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/bcprov-jdk15on",
+      "capability_ids": [
+        "CAP-SCA-TRANS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-029",
+      "phase": "SCA",
+      "category": "Hibernate Validator",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/hibernate-validator",
+      "capability_ids": [
+        "CAP-SCA-TRANS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-030",
+      "phase": "SCA",
+      "category": "Guava",
+      "subcategory": "vulnerable",
+      "file_path": "pom.xml",
+      "endpoint": "/api/v1/system/update/check/guava",
+      "capability_ids": [
+        "CAP-SCA-TRANS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-031",
+      "phase": "SCA",
+      "category": "Log4j Core",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-032",
+      "phase": "SCA",
+      "category": "Jackson Databind",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-033",
+      "phase": "SCA",
+      "category": "SnakeYAML",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-034",
+      "phase": "SCA",
+      "category": "Commons Collections",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-035",
+      "phase": "SCA",
+      "category": "Spring Core",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-036",
+      "phase": "SCA",
+      "category": "Apache Commons Text",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-037",
+      "phase": "SCA",
+      "category": "Apache HttpClient",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-038",
+      "phase": "SCA",
+      "category": "Bouncy Castle",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-039",
+      "phase": "SCA",
+      "category": "Hibernate Validator",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-SCA-040",
+      "phase": "SCA",
+      "category": "Guava",
+      "subcategory": "unreachable",
+      "file_path": "pom.xml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SCA-UNREACH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "unreachable"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-001",
+      "phase": "DAST",
+      "category": "SQL Injection",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductSearchGateway.java",
+      "endpoint": "/api/v1/catalog/query",
+      "capability_ids": [
+        "CAP-DAST-SQLI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-002",
+      "phase": "DAST",
+      "category": "SQL Injection",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/catalog/ProductSearchGateway.java",
+      "endpoint": "/api/v1/catalog/query/secure",
+      "capability_ids": [
+        "CAP-DAST-SQLI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-003",
+      "phase": "DAST",
+      "category": "XSS",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/review/FeedbackReviewController.java",
+      "endpoint": "/api/v1/reviews/feedback",
+      "capability_ids": [
+        "CAP-DAST-XSS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-004",
+      "phase": "DAST",
+      "category": "XSS",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/review/FeedbackReviewController.java",
+      "endpoint": "/api/v1/reviews/feedback/secure",
+      "capability_ids": [
+        "CAP-DAST-XSS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-005",
+      "phase": "DAST",
+      "category": "CSRF",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/cart/ShoppingCartController.java",
+      "endpoint": "/api/v1/cart/items",
+      "capability_ids": [
+        "CAP-DAST-CSRF-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-006",
+      "phase": "DAST",
+      "category": "CSRF",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/cart/ShoppingCartController.java",
+      "endpoint": "/api/v1/cart/items/secure",
+      "capability_ids": [
+        "CAP-DAST-CSRF-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-007",
+      "phase": "DAST",
+      "category": "SSRF",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/common/VendorWebhookController.java",
+      "endpoint": "/api/v1/vendors/webhooks",
+      "capability_ids": [
+        "CAP-DAST-SSRF-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-008",
+      "phase": "DAST",
+      "category": "SSRF",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/common/VendorWebhookController.java",
+      "endpoint": "/api/v1/vendors/webhooks/secure",
+      "capability_ids": [
+        "CAP-DAST-SSRF-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-009",
+      "phase": "DAST",
+      "category": "Open Redirect",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/common/OAuthRedirectController.java",
+      "endpoint": "/api/v1/auth/oauth/redirect",
+      "capability_ids": [
+        "CAP-DAST-REDIRE-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-010",
+      "phase": "DAST",
+      "category": "Open Redirect",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/common/OAuthRedirectController.java",
+      "endpoint": "/api/v1/auth/oauth/redirect/secure",
+      "capability_ids": [
+        "CAP-DAST-REDIRE-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-011",
+      "phase": "DAST",
+      "category": "Path Traversal",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/support/AssetDownloadController.java",
+      "endpoint": "/api/v1/assets/download",
+      "capability_ids": [
+        "CAP-DAST-TRAVER-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-012",
+      "phase": "DAST",
+      "category": "Path Traversal",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/support/AssetDownloadController.java",
+      "endpoint": "/api/v1/assets/download/secure",
+      "capability_ids": [
+        "CAP-DAST-TRAVER-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-013",
+      "phase": "DAST",
+      "category": "File Upload",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/support/ProfileImageUploadController.java",
+      "endpoint": "/api/v1/profile/avatar/upload",
+      "capability_ids": [
+        "CAP-DAST-UPLOAD-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-014",
+      "phase": "DAST",
+      "category": "File Upload",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/support/ProfileImageUploadController.java",
+      "endpoint": "/api/v1/profile/avatar/upload/secure",
+      "capability_ids": [
+        "CAP-DAST-UPLOAD-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-015",
+      "phase": "DAST",
+      "category": "Authentication Weakness",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/auth/MemberLoginController.java",
+      "endpoint": "/api/v1/auth/member-login",
+      "capability_ids": [
+        "CAP-DAST-AUTH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-016",
+      "phase": "DAST",
+      "category": "Authentication Weakness",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/auth/MemberLoginController.java",
+      "endpoint": "/api/v1/auth/member-login/secure",
+      "capability_ids": [
+        "CAP-DAST-AUTH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-017",
+      "phase": "DAST",
+      "category": "Authorization Weakness",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/reporting/AdminSettingsController.java",
+      "endpoint": "/api/v1/admin/settings",
+      "capability_ids": [
+        "CAP-DAST-AUTHZ-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-018",
+      "phase": "DAST",
+      "category": "Authorization Weakness",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/reporting/AdminSettingsController.java",
+      "endpoint": "/api/v1/admin/settings/secure",
+      "capability_ids": [
+        "CAP-DAST-AUTHZ-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-019",
+      "phase": "DAST",
+      "category": "API Security",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/order/OrderCheckoutController.java",
+      "endpoint": "/api/v1/checkout/place-order",
+      "capability_ids": [
+        "CAP-DAST-API-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-DAST-020",
+      "phase": "DAST",
+      "category": "API Security",
+      "subcategory": "safe",
+      "file_path": "src/main/java/com/shopsphere/order/OrderCheckoutController.java",
+      "endpoint": "/api/v1/checkout/place-order/secure",
+      "capability_ids": [
+        "CAP-DAST-API-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-001",
+      "phase": "SECRET",
+      "category": "AWS Access Key in Source",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/util/CloudConfig.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-AWSACC-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-002",
+      "phase": "SECRET",
+      "category": "AWS Secret Key in Source",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/util/CloudConfig.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-AWSSEC-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-003",
+      "phase": "SECRET",
+      "category": "GitHub Token in Source",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/util/GitHubClient.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-GITHUB-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-004",
+      "phase": "SECRET",
+      "category": "GitLab Token in Source",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/util/GitLabClient.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-GITLAB-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-005",
+      "phase": "SECRET",
+      "category": "Slack Token in Source",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/util/SlackNotifier.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-SLACKB-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-006",
+      "phase": "SECRET",
+      "category": "Azure Client Secret in Source",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/java/com/shopsphere/util/AzureConfig.java",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-AZUREC-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-007",
+      "phase": "SECRET",
+      "category": "GCP Service Account Key in YAML",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/resources/gcp-credentials.yml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-GCPSER-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-008",
+      "phase": "SECRET",
+      "category": "JWT Secret in YAML",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/resources/application-secrets.yml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-JWTSIG-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-009",
+      "phase": "SECRET",
+      "category": "Database Password in YAML",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/resources/application-secrets.yml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-DATABA-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-010",
+      "phase": "SECRET",
+      "category": "API Key in YAML",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/resources/third-party-config.yml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-GENERI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-011",
+      "phase": "SECRET",
+      "category": "SSH Private Key in JSON",
+      "subcategory": "vulnerable",
+      "file_path": "secrets-benchmark/config-files/ssh-config.json",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-SSHPRI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-012",
+      "phase": "SECRET",
+      "category": "Certificate Private Key in JSON",
+      "subcategory": "vulnerable",
+      "file_path": "secrets-benchmark/config-files/tls-config.json",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-TLSPRI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-013",
+      "phase": "SECRET",
+      "category": "OAuth Client Secret in JSON",
+      "subcategory": "vulnerable",
+      "file_path": "secrets-benchmark/config-files/oauth-config.json",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-OAUTHC-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-014",
+      "phase": "SECRET",
+      "category": "DB Connection String in Properties",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/resources/database.properties",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-DATABA-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-015",
+      "phase": "SECRET",
+      "category": "SMTP Password in Properties",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/resources/mail.properties",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-SMTPPA-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-016",
+      "phase": "SECRET",
+      "category": "Redis Password in Properties",
+      "subcategory": "vulnerable",
+      "file_path": "src/main/resources/redis.properties",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-REDISP-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-017",
+      "phase": "SECRET",
+      "category": "AWS Credentials in Env",
+      "subcategory": "vulnerable",
+      "file_path": "secrets-benchmark/config-files/.env.production",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-AWSCRE-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-018",
+      "phase": "SECRET",
+      "category": "Stripe API Key in Env",
+      "subcategory": "vulnerable",
+      "file_path": "secrets-benchmark/config-files/.env.production",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-STRIPE-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-019",
+      "phase": "SECRET",
+      "category": "Twilio Auth Token in Env",
+      "subcategory": "vulnerable",
+      "file_path": "secrets-benchmark/config-files/.env.production",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-TWILIO-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-020",
+      "phase": "SECRET",
+      "category": "Cloud Provider Secret in Terraform",
+      "subcategory": "vulnerable",
+      "file_path": "iac/terraform/aws/vulnerable/provider-secrets.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-CLOUDP-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-021",
+      "phase": "SECRET",
+      "category": "Private Key in Terraform",
+      "subcategory": "vulnerable",
+      "file_path": "iac/terraform/aws/vulnerable/tls-config.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-TLSPRI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-022",
+      "phase": "SECRET",
+      "category": "Access Token in Terraform",
+      "subcategory": "vulnerable",
+      "file_path": "iac/terraform/aws/vulnerable/api-gateway.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-APIACC-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-023",
+      "phase": "SECRET",
+      "category": "Registry Password in Dockerfile",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.secrets",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-CONTAI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-024",
+      "phase": "SECRET",
+      "category": "API Credentials in Dockerfile",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.api-creds",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-APICRE-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-025",
+      "phase": "SECRET",
+      "category": "Encryption Key in Dockerfile",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.enc-key",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-ENCRYP-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-026",
+      "phase": "SECRET",
+      "category": "Deploy Key in CI/CD",
+      "subcategory": "vulnerable",
+      "file_path": "cicd/github-actions/vulnerable/deploy-with-secrets.yml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-SSHDEP-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-027",
+      "phase": "SECRET",
+      "category": "NPM Token in CI/CD",
+      "subcategory": "vulnerable",
+      "file_path": "cicd/github-actions/vulnerable/npm-publish-secrets.yml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-NPMAUT-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-028",
+      "phase": "SECRET",
+      "category": "Docker Hub Token in CI/CD",
+      "subcategory": "vulnerable",
+      "file_path": "cicd/jenkins/vulnerable/Jenkinsfile.docker-secrets",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-DOCKER-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-029",
+      "phase": "SECRET",
+      "category": "SSH Key in K8s Secret",
+      "subcategory": "vulnerable",
+      "file_path": "iac/kubernetes/secrets/ssh-key-secret.yaml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-SSHPRI-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-030",
+      "phase": "SECRET",
+      "category": "TLS Key in K8s Secret",
+      "subcategory": "vulnerable",
+      "file_path": "iac/kubernetes/secrets/tls-secret.yaml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-SECRET-TLSCER-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-001",
+      "phase": "CONTAINER",
+      "category": "Root User",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.root-user",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-ROOTUS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-002",
+      "phase": "CONTAINER",
+      "category": "Root User",
+      "subcategory": "safe",
+      "file_path": "container/safe/Dockerfile.root-user",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-ROOTUS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-003",
+      "phase": "CONTAINER",
+      "category": "Privilege Escalation",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.privesc",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-PRIVES-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-004",
+      "phase": "CONTAINER",
+      "category": "Privilege Escalation",
+      "subcategory": "safe",
+      "file_path": "container/safe/Dockerfile.privesc",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-PRIVES-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-005",
+      "phase": "CONTAINER",
+      "category": "Dangerous Capabilities",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.caps",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-CAPS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-006",
+      "phase": "CONTAINER",
+      "category": "Dangerous Capabilities",
+      "subcategory": "safe",
+      "file_path": "container/safe/Dockerfile.caps",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-CAPS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-007",
+      "phase": "CONTAINER",
+      "category": "Outdated Base Image",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.outdated-base",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-BASEIM-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-008",
+      "phase": "CONTAINER",
+      "category": "Outdated Base Image",
+      "subcategory": "safe",
+      "file_path": "container/safe/Dockerfile.outdated-base",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-BASEIM-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-009",
+      "phase": "CONTAINER",
+      "category": "Exposed Secrets",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.exposed-secrets",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-SECRET-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-010",
+      "phase": "CONTAINER",
+      "category": "Exposed Secrets",
+      "subcategory": "safe",
+      "file_path": "container/safe/Dockerfile.exposed-secrets",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-SECRET-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-011",
+      "phase": "CONTAINER",
+      "category": "Weak Runtime Config",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.weak-runtime",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-RUNTIM-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-012",
+      "phase": "CONTAINER",
+      "category": "Weak Runtime Config",
+      "subcategory": "safe",
+      "file_path": "container/safe/Dockerfile.weak-runtime",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-RUNTIM-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-013",
+      "phase": "CONTAINER",
+      "category": "Excessive Attack Surface",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.attack-surface",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-SURFAC-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-014",
+      "phase": "CONTAINER",
+      "category": "Excessive Attack Surface",
+      "subcategory": "safe",
+      "file_path": "container/safe/Dockerfile.attack-surface",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-SURFAC-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-015",
+      "phase": "CONTAINER",
+      "category": "Missing Health Checks",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.no-healthcheck",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-HEALTH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-016",
+      "phase": "CONTAINER",
+      "category": "Missing Health Checks",
+      "subcategory": "safe",
+      "file_path": "container/safe/Dockerfile.healthcheck",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-HEALTH-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-017",
+      "phase": "CONTAINER",
+      "category": "Package Vulnerabilities",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.pkg-vuln",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-PKGVUL-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-018",
+      "phase": "CONTAINER",
+      "category": "Package Vulnerabilities",
+      "subcategory": "safe",
+      "file_path": "container/safe/Dockerfile.pkg-vuln",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-PKGVUL-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-019",
+      "phase": "CONTAINER",
+      "category": "Weak File Permissions",
+      "subcategory": "vulnerable",
+      "file_path": "container/vulnerable/Dockerfile.weak-perms",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-PERMS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-020",
+      "phase": "CONTAINER",
+      "category": "Weak File Permissions",
+      "subcategory": "safe",
+      "file_path": "container/safe/Dockerfile.weak-perms",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-CONTAINER-PERMS-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-001",
+      "phase": "IAC",
+      "category": "Public S3 Bucket",
+      "subcategory": "vulnerable",
+      "file_path": "iac/terraform/aws/vulnerable/public-s3-bucket.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-S3PUBL-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-002",
+      "phase": "IAC",
+      "category": "Public S3 Bucket",
+      "subcategory": "safe",
+      "file_path": "iac/terraform/aws/safe/private-s3-bucket.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-S3PUBL-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-003",
+      "phase": "IAC",
+      "category": "Public Database",
+      "subcategory": "vulnerable",
+      "file_path": "iac/terraform/aws/vulnerable/public-rds.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-DBPUBL-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-004",
+      "phase": "IAC",
+      "category": "Public Database",
+      "subcategory": "safe",
+      "file_path": "iac/terraform/aws/safe/private-rds.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-DBPUBL-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-005",
+      "phase": "IAC",
+      "category": "Weak Security Groups",
+      "subcategory": "vulnerable",
+      "file_path": "iac/terraform/aws/vulnerable/weak-security-group.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-WEAKSG-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-006",
+      "phase": "IAC",
+      "category": "Weak Security Groups",
+      "subcategory": "safe",
+      "file_path": "iac/terraform/aws/safe/restricted-security-group.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-WEAKSG-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-007",
+      "phase": "IAC",
+      "category": "Excessive IAM Permissions",
+      "subcategory": "vulnerable",
+      "file_path": "iac/terraform/aws/vulnerable/excessive-iam.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-IAMEXC-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-008",
+      "phase": "IAC",
+      "category": "Excessive IAM Permissions",
+      "subcategory": "safe",
+      "file_path": "iac/terraform/aws/safe/least-privilege-iam.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-IAMEXC-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-009",
+      "phase": "IAC",
+      "category": "Missing Encryption",
+      "subcategory": "vulnerable",
+      "file_path": "iac/terraform/aws/vulnerable/unencrypted-storage.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-NOENCR-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-010",
+      "phase": "IAC",
+      "category": "Missing Encryption",
+      "subcategory": "safe",
+      "file_path": "iac/terraform/aws/safe/encrypted-storage.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-NOENCR-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-011",
+      "phase": "IAC",
+      "category": "Missing Logging",
+      "subcategory": "vulnerable",
+      "file_path": "iac/terraform/aws/vulnerable/no-logging.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-NOLOGG-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-012",
+      "phase": "IAC",
+      "category": "Missing Logging",
+      "subcategory": "safe",
+      "file_path": "iac/terraform/aws/safe/full-logging.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-NOLOGG-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-013",
+      "phase": "IAC",
+      "category": "Weak Network Segmentation",
+      "subcategory": "vulnerable",
+      "file_path": "iac/terraform/aws/vulnerable/flat-network.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-WEAKSE-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-014",
+      "phase": "IAC",
+      "category": "Weak Network Segmentation",
+      "subcategory": "safe",
+      "file_path": "iac/terraform/aws/safe/segmented-network.tf",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-WEAKSE-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-015",
+      "phase": "IAC",
+      "category": "Dangerous RBAC",
+      "subcategory": "vulnerable",
+      "file_path": "iac/kubernetes/rbac/dangerous-clusterrole.yaml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-RBAC-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-016",
+      "phase": "IAC",
+      "category": "Dangerous RBAC",
+      "subcategory": "safe",
+      "file_path": "iac/kubernetes/rbac/restricted-clusterrole.yaml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-RBAC-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-017",
+      "phase": "IAC",
+      "category": "Privileged Pods",
+      "subcategory": "vulnerable",
+      "file_path": "iac/kubernetes/deployments/privileged-pod.yaml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-PRIVPO-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-018",
+      "phase": "IAC",
+      "category": "Privileged Pods",
+      "subcategory": "safe",
+      "file_path": "iac/kubernetes/deployments/restricted-pod.yaml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-PRIVPO-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-019",
+      "phase": "IAC",
+      "category": "HostPath Mounts",
+      "subcategory": "vulnerable",
+      "file_path": "iac/kubernetes/deployments/hostpath-mount.yaml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-HOSTPA-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "vulnerable"
+    },
+    {
+      "benchmark_id": "BENCH-IAC-020",
+      "phase": "IAC",
+      "category": "HostPath Mounts",
+      "subcategory": "safe",
+      "file_path": "iac/kubernetes/deployments/safe-volume-mount.yaml",
+      "endpoint": null,
+      "capability_ids": [
+        "CAP-IAC-HOSTPA-001"
+      ],
+      "status": "planned",
+      "created_in_phase": 1,
+      "ground_truth_registered": true,
+      "expected_findings_registered": true,
+      "control_pair_group": null,
+      "variant": "safe"
+    }
+  ]
+}

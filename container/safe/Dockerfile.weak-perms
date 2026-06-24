@@ -1,0 +1,7 @@
+# BENCH-CONTAINER-020
+FROM alpine:3.18
+RUN mkdir /config && addgroup -S appgroup && adduser -S appuser -G appgroup
+RUN echo '{"database_url": "jdbc:mysql://localhost:3306/mydb"}' > /config/app-config.json
+RUN chmod 600 /config/app-config.json && chown appuser:appgroup /config/app-config.json
+USER appuser
+ENTRYPOINT ["/bin/sh"]

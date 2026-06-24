@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+    stages {
+        stage('Install') {
+            steps {
+                // Dependency confusion vulnerability by calling npm install directly without locking or scoped registry
+                sh 'npm install'
+            }
+        }
+    }
+}

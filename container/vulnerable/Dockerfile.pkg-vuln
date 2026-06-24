@@ -1,0 +1,4 @@
+# BENCH-CONTAINER-017
+FROM alpine:3.17
+RUN apk add --no-cache openssl=1.1.1t-r0
+ENTRYPOINT ["/bin/sh"]

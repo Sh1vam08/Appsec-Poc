@@ -1,0 +1,4 @@
+# BENCH-CONTAINER-018
+FROM alpine:3.18
+RUN apk update && apk upgrade && apk add --no-cache openssl
+ENTRYPOINT ["/bin/sh"]
