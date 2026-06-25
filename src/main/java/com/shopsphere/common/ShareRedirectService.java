@@ -1,4 +1,4 @@
-package com.shopsphere.service.sast.redirect;
+package com.shopsphere.common;
 
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,5 @@
-package com.shopsphere.controller.dast.redirect;
+package com.shopsphere.common;
 
-import com.shopsphere.service.dast.redirect.OAuthRedirectService;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

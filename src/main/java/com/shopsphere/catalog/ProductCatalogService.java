@@ -1,8 +1,7 @@
-package com.shopsphere.service.sast.injection;
+package com.shopsphere.catalog;
 
 import com.shopsphere.model.entity.User;
 import com.shopsphere.repository.UserRepository;
-import com.shopsphere.repository.sast.injection.ProductCatalogRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.shopsphere.service.sast.xss;
+package com.shopsphere.review;
 
 import jakarta.servlet.http.HttpServletResponse;
 import org.owasp.encoder.Encode;

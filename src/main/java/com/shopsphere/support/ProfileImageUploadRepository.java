@@ -1,4 +1,4 @@
-package com.shopsphere.repository.dast.upload;
+package com.shopsphere.support;
 
 import org.springframework.stereotype.Repository;
 import java.io.File;

@@ -1,6 +1,5 @@
-package com.shopsphere.controller.sast.injection;
+package com.shopsphere.catalog;
 
-import com.shopsphere.service.sast.injection.InventoryImportService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

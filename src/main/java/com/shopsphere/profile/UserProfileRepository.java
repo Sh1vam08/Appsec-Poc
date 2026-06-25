@@ -1,4 +1,4 @@
-package com.shopsphere.repository.sast.data;
+package com.shopsphere.profile;
 
 import com.shopsphere.model.entity.UserProfileData;
 import org.springframework.data.jpa.repository.JpaRepository;

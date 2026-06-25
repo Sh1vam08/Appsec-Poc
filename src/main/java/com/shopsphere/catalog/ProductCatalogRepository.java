@@ -1,4 +1,4 @@
-package com.shopsphere.repository.sast.injection;
+package com.shopsphere.catalog;
 
 import com.shopsphere.model.entity.User;
 import jakarta.persistence.EntityManager;

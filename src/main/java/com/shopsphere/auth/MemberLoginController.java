@@ -1,6 +1,5 @@
-package com.shopsphere.controller.dast.auth;
+package com.shopsphere.auth;
 
-import com.shopsphere.service.dast.auth.MemberLoginService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

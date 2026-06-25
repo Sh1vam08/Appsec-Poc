@@ -1,4 +1,4 @@
-package com.shopsphere.repository.dast.traversal;
+package com.shopsphere.support;
 
 import org.springframework.stereotype.Repository;
 import java.io.File;

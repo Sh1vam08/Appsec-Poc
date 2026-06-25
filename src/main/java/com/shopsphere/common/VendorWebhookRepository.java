@@ -1,4 +1,4 @@
-package com.shopsphere.repository.dast.ssrf;
+package com.shopsphere.common;
 
 import org.springframework.stereotype.Repository;
 import java.util.ArrayList;

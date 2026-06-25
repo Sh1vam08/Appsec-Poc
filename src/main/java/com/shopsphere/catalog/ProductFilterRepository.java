@@ -1,4 +1,4 @@
-package com.shopsphere.repository.sast.injection;
+package com.shopsphere.catalog;
 
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;

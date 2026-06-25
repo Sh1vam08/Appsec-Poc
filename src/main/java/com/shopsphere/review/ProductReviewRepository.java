@@ -1,4 +1,4 @@
-package com.shopsphere.repository.sast.xss;
+package com.shopsphere.review;
 
 import com.shopsphere.model.entity.SecurityAuditReport;
 import jakarta.persistence.EntityManager;

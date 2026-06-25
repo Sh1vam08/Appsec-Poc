@@ -1,4 +1,4 @@
-package com.shopsphere.repository.dast.csrf;
+package com.shopsphere.cart;
 
 import org.springframework.stereotype.Repository;
 

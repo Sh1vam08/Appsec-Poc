@@ -1,6 +1,5 @@
-package com.shopsphere.service.sast.crypto;
+package com.shopsphere.payment;
 
-import com.shopsphere.repository.sast.crypto.PaymentGatewayConfigRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.sql.Connection;

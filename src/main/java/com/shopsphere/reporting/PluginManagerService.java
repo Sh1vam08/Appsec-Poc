@@ -1,4 +1,4 @@
-package com.shopsphere.service.sast.reflection;
+package com.shopsphere.reporting;
 
 import org.springframework.stereotype.Service;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.shopsphere.service.sast.injection;
+package com.shopsphere.catalog;
 
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;

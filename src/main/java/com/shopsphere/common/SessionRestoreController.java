@@ -1,7 +1,6 @@
-package com.shopsphere.controller.sast.deserialization;
+package com.shopsphere.common;
 
 import com.shopsphere.model.dto.UserDto;
-import com.shopsphere.service.sast.deserialization.SessionRestoreService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

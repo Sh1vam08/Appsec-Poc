@@ -1,9 +1,8 @@
-package com.shopsphere.service.sast.data;
+package com.shopsphere.profile;
 
 import com.shopsphere.model.dto.UserProfileDto;
 import com.shopsphere.model.dto.RawUserProfileDto;
 import com.shopsphere.model.entity.UserProfileData;
-import com.shopsphere.repository.sast.data.UserProfileRepository;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
 

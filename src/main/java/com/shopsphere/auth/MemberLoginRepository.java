@@ -1,4 +1,4 @@
-package com.shopsphere.repository.dast.auth;
+package com.shopsphere.auth;
 
 import com.shopsphere.model.entity.User;
 import com.shopsphere.repository.UserRepository;

@@ -1,6 +1,5 @@
-package com.shopsphere.controller.sast.redirect;
+package com.shopsphere.common;
 
-import com.shopsphere.service.sast.redirect.ShareRedirectService;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.shopsphere.repository.dast.authz;
+package com.shopsphere.reporting;
 
 import com.shopsphere.model.entity.SecurityAuditReport;
 import com.shopsphere.repository.SecurityAuditReportRepository;

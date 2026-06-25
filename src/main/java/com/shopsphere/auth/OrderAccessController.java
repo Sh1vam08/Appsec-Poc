@@ -1,8 +1,7 @@
-package com.shopsphere.controller.sast.auth;
+package com.shopsphere.auth;
 
 import com.shopsphere.model.dto.UserDto;
 import com.shopsphere.model.entity.User;
-import com.shopsphere.service.sast.auth.OrderAccessService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,9 +1,8 @@
-package com.shopsphere.controller.sast.data;
+package com.shopsphere.profile;
 
 import com.shopsphere.model.dto.UserProfileDto;
 import com.shopsphere.model.dto.RawUserProfileDto;
 import com.shopsphere.model.entity.UserProfileData;
-import com.shopsphere.service.sast.data.UserProfileService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

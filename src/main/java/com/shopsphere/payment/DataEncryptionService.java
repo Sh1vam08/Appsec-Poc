@@ -1,4 +1,4 @@
-package com.shopsphere.service.sast.crypto;
+package com.shopsphere.payment;
 
 import org.springframework.security.crypto.encrypt.Encryptors;
 import org.springframework.security.crypto.encrypt.TextEncryptor;

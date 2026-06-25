@@ -1,6 +1,5 @@
-package com.shopsphere.controller.dast.ssrf;
+package com.shopsphere.common;
 
-import com.shopsphere.service.dast.ssrf.VendorWebhookService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

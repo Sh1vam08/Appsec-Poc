@@ -1,4 +1,4 @@
-package com.shopsphere.repository.dast.xss;
+package com.shopsphere.review;
 
 import org.springframework.stereotype.Repository;
 import java.util.ArrayList;

@@ -1,7 +1,6 @@
-package com.shopsphere.service.dast.auth;
+package com.shopsphere.auth;
 
 import com.shopsphere.model.entity.User;
-import com.shopsphere.repository.dast.auth.MemberLoginRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.Optional;

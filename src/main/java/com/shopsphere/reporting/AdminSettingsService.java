@@ -1,7 +1,6 @@
-package com.shopsphere.service.dast.authz;
+package com.shopsphere.reporting;
 
 import com.shopsphere.model.entity.SecurityAuditReport;
-import com.shopsphere.repository.dast.authz.AdminSettingsRepository;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

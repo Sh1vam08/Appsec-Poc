@@ -1,6 +1,5 @@
-package com.shopsphere.service.dast.csrf;
+package com.shopsphere.cart;
 
-import com.shopsphere.repository.dast.csrf.ShoppingCartRepository;
 import org.springframework.stereotype.Service;
 
 /**

@@ -1,7 +1,6 @@
-package com.shopsphere.controller.sast.injection;
+package com.shopsphere.catalog;
 
 import com.shopsphere.model.entity.User;
-import com.shopsphere.service.sast.injection.ProductCatalogService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

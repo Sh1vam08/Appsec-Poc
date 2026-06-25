@@ -1,4 +1,4 @@
-package com.shopsphere.service.sast.injection;
+package com.shopsphere.catalog;
 
 import org.springframework.expression.ExpressionParser;
 import org.springframework.expression.spel.standard.SpelExpressionParser;

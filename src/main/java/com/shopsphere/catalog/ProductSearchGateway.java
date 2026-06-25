@@ -1,6 +1,5 @@
-package com.shopsphere.controller.dast.sqli;
+package com.shopsphere.catalog;
 
-import com.shopsphere.service.dast.sqli.ProductSearchGatewayService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

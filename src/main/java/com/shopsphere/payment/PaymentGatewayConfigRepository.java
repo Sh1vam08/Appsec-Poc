@@ -1,4 +1,4 @@
-package com.shopsphere.repository.sast.crypto;
+package com.shopsphere.payment;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;

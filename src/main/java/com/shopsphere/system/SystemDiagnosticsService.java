@@ -1,4 +1,4 @@
-package com.shopsphere.service.sca;
+package com.shopsphere.system;
 
 import org.springframework.stereotype.Service;
 import java.io.File;

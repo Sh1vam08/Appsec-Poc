@@ -1,7 +1,6 @@
-package com.shopsphere.controller.dast.authz;
+package com.shopsphere.reporting;
 
 import com.shopsphere.model.entity.SecurityAuditReport;
-import com.shopsphere.service.dast.authz.AdminSettingsService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;

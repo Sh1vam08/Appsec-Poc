@@ -1,6 +1,5 @@
-package com.shopsphere.service.sast.injection;
+package com.shopsphere.catalog;
 
-import com.shopsphere.repository.sast.injection.ProductFilterRepository;
 import org.bson.Document;
 import org.springframework.stereotype.Service;
 import java.util.List;

@@ -1,6 +1,5 @@
-package com.shopsphere.service.dast.traversal;
+package com.shopsphere.support;
 
-import com.shopsphere.repository.dast.traversal.AssetDownloadRepository;
 import org.springframework.stereotype.Service;
 import java.io.File;
 import java.io.IOException;

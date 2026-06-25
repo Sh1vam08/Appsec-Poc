@@ -1,6 +1,5 @@
-package com.shopsphere.service.dast.upload;
+package com.shopsphere.support;
 
-import com.shopsphere.repository.dast.upload.ProfileImageUploadRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import java.io.File;

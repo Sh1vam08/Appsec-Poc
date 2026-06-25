@@ -1,6 +1,5 @@
-package com.shopsphere.service.dast.ssrf;
+package com.shopsphere.common;
 
-import com.shopsphere.repository.dast.ssrf.VendorWebhookRepository;
 import org.springframework.stereotype.Service;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

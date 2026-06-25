@@ -1,6 +1,5 @@
-package com.shopsphere.service.dast.sqli;
+package com.shopsphere.catalog;
 
-import com.shopsphere.repository.dast.sqli.ProductSearchGatewayRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 

@@ -1,6 +1,5 @@
-package com.shopsphere.controller.sast.xss;
+package com.shopsphere.review;
 
-import com.shopsphere.service.sast.xss.ProductReviewService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,6 +1,5 @@
-package com.shopsphere.service.dast.xss;
+package com.shopsphere.review;
 
-import com.shopsphere.repository.dast.xss.FeedbackReviewRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 

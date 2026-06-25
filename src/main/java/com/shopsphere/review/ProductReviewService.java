@@ -1,6 +1,5 @@
-package com.shopsphere.service.sast.xss;
+package com.shopsphere.review;
 
-import com.shopsphere.repository.sast.xss.ProductReviewRepository;
 import org.springframework.stereotype.Service;
 
 /**

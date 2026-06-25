@@ -1,6 +1,5 @@
-package com.shopsphere.controller.dast.upload;
+package com.shopsphere.support;
 
-import com.shopsphere.service.dast.upload.ProfileImageUploadService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

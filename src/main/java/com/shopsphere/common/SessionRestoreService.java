@@ -1,4 +1,4 @@
-package com.shopsphere.service.sast.deserialization;
+package com.shopsphere.common;
 
 import com.shopsphere.model.dto.UserDto;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -1,4 +1,4 @@
-package com.shopsphere.repository.dast.sqli;
+package com.shopsphere.catalog;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

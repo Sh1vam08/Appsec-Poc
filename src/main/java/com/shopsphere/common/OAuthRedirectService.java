@@ -1,6 +1,5 @@
-package com.shopsphere.service.dast.redirect;
+package com.shopsphere.common;
 
-import com.shopsphere.repository.dast.redirect.OAuthRedirectRepository;
 import org.springframework.stereotype.Service;
 
 /**
