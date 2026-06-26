@@ -1,0 +1,59 @@
+# BENCH-IAC-027: AWS CloudFormation template with publicly accessible EC2
+# Tests: Infrastructure configuration analysis (IaC templates)
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Intentionally vulnerable CloudFormation template for benchmark testing
+
+Resources:
+
+  # Publicly accessible EC2 instance with no encryption
+  VulnerableInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0abcdef1234567890
+      InstanceType: t2.micro
+      SecurityGroupIds:
+        - !Ref VulnerableSecurityGroup
+      # No IAM instance profile — uses default permissions
+      # No encryption on root volume
+
+  # Security group allowing SSH from anywhere
+  VulnerableSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allows all traffic
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 3389
+          ToPort: 3389
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: -1
+          FromPort: -1
+          ToPort: -1
+          CidrIp: 0.0.0.0/0
+
+  # S3 Bucket with no encryption and public access
+  VulnerableBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: vulnerable-cloudformation-bucket
+      AccessControl: PublicRead
+      # No ServerSideEncryptionConfiguration
+      # No VersioningConfiguration
+      # No LoggingConfiguration
+
+  # RDS Instance with public access and no encryption
+  VulnerableDatabase:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceClass: db.t3.micro
+      Engine: mysql
+      MasterUsername: admin
+      MasterUserPassword: Password123!
+      PubliclyAccessible: true
+      StorageEncrypted: false
+      MultiAZ: false
+      BackupRetentionPeriod: 0

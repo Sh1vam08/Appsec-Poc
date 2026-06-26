@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPI Framework Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: rgba(22, 25, 41, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --primary-glow: #6366f1;
+            --secondary-glow: #06b6d4;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --code-bg: #1e1e2e;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 40%);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            padding: 3rem 2rem;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+            color: #ffffff;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff, #a5b4fc, #67e8f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.25rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .back-link {
+            color: #818cf8;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #a5b4fc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.925rem;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        th {
+            background-color: rgba(99, 102, 241, 0.1);
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        td {
+            color: var(--text-muted);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1.25rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            color: #cdd6f4;
+        }
+
+        p > code {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #f38ba8;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+
+        .diagram {
+            background-color: rgba(15, 17, 28, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: monospace;
+            white-space: pre;
+            overflow-x: auto;
+            color: #818cf8;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back to Dashboard
+        </a>
+
+        <h1>KPI Framework Documentation</h1>
+        <p><strong>Enterprise AppSec Benchmark Suite v1.0.0</strong></p>
+
+        <h2>Overview</h2>
+        <p>The KPI Framework is the scoring and evaluation engine for the Enterprise AppSec Benchmark Suite. It ingests vendor scan results, compares them against the 210-scenario ground truth, and produces comprehensive metrics, grades, and reports for vendor comparison.</p>
+
+        <h2>Architecture</h2>
+        <div class="diagram">
+┌───────────────────┐     ┌──────────────────────┐     ┌──────────────────┐
+│  Vendor Scan      │     │   Ground Truth        │     │  Scoring Rubric  │
+│  Results          │     │  (expected_findings)  │     │  (weights,       │
+│  (SARIF/JSON/CSV) │     │  (vuln_register)      │     │   thresholds)    │
+└────────┬──────────┘     └──────────┬────────────┘     └────────┬─────────┘
+         │                           │                            │
+         └───────────┐  ┌────────────┘  ┌─────────────────────────┘
+                     ▼  ▼              ▼
+              ┌──────────────────────────────┐
+              │       KPI Calculator          │
+              │  (scripts/kpi_calculator.py)  │
+              └──────────────┬───────────────┘
+                             │
+              ┌──────────────┼──────────────────┐
+              ▼              ▼                  ▼
+     ┌────────────┐  ┌──────────────┐  ┌────────────────┐
+     │ JSON Report│  │ MD Report    │  │ Dashboard Data │
+     │            │  │              │  │ (6 JSON feeds) │
+     └────────────┘  └──────────────┘  └────────────────┘</div>
+
+        <h2>Core Metrics</h2>
+        
+        <h3>1. Confusion Matrix</h3>
+        <p>Every benchmark scenario is classified into one of four outcomes:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario Variant</th>
+                    <th>Scanner Reports Finding</th>
+                    <th>Scanner Reports No Finding</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Actually Vulnerable</strong></td>
+                    <td>✅ True Positive (TP)</td>
+                    <td>❌ False Negative (FN)</td>
+                </tr>
+                <tr>
+                    <td><strong>Actually Safe</strong></td>
+                    <td>❌ False Positive (FP)</td>
+                    <td>✅ True Negative (TN)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>2. Primary KPIs</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>KPI</th>
+                    <th>Formula</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Precision</strong></td>
+                    <td>TP / (TP + FP)</td>
+                    <td>Of all findings reported, how many are real?</td>
+                </tr>
+                <tr>
+                    <td><strong>Recall (Detection Coverage)</strong></td>
+                    <td>TP / (TP + FN)</td>
+                    <td>Of all real vulnerabilities, how many were found?</td>
+                </tr>
+                <tr>
+                    <td><strong>Accuracy</strong></td>
+                    <td>(TP + TN) / Total</td>
+                    <td>Overall correctness across all scenarios</td>
+                </tr>
+                <tr>
+                    <td><strong>F1 Score</strong></td>
+                    <td>2 × (P × R) / (P + R)</td>
+                    <td>Harmonic mean of precision and recall</td>
+                </tr>
+                <tr>
+                    <td><strong>False Positive Rate</strong></td>
+                    <td>FP / (FP + TN)</td>
+                    <td>How often safe code is flagged as vulnerable</td>
+                </tr>
+                <tr>
+                    <td><strong>False Negative Rate</strong></td>
+                    <td>FN / (FN + TP)</td>
+                    <td>How often real vulnerabilities are missed</td>
+                </tr>
+                <tr>
+                    <td><strong>Severity Accuracy</strong></td>
+                    <td>Correct Severities / Total Detected</td>
+                    <td>How accurately severity is classified</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>3. Composite Score (0-100)</h3>
+        <p>The composite score combines all metrics using the weighted rubric:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Weight</th>
+                    <th>Composition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Core Detection</td>
+                    <td>60%</td>
+                    <td>F1 (40%) + Recall (30%) + Precision (20%) + (1-FPR) (10%)</td>
+                </tr>
+                <tr>
+                    <td>Severity Accuracy</td>
+                    <td>15%</td>
+                    <td>Correct severity classifications</td>
+                </tr>
+                <tr>
+                    <td>Coverage Breadth</td>
+                    <td>15%</td>
+                    <td>Proportion of categories covered (SAST, DAST, SCA, etc.)</td>
+                </tr>
+                <tr>
+                    <td>AI Capabilities</td>
+                    <td>10%</td>
+                    <td>AI feature evaluation scores</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4. Letter Grades</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Grade</th>
+                    <th>Score Range</th>
+                    <th>Meaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A+</td>
+                    <td>≥ 95</td>
+                    <td>Exceptional - Best-in-class</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>≥ 90</td>
+                    <td>Excellent - Comprehensive detection</td>
+                </tr>
+                <tr>
+                    <td>A-</td>
+                    <td>≥ 85</td>
+                    <td>Very Good - Minor gaps</td>
+                </tr>
+                <tr>
+                    <td>B+</td>
+                    <td>≥ 80</td>
+                    <td>Good - Solid but with patterns</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>≥ 75</td>
+                    <td>Above Average - Core detection works</td>
+                </tr>
+                <tr>
+                    <td>B-</td>
+                    <td>≥ 70</td>
+                    <td>Adequate - Room for improvement</td>
+                </tr>
+                <tr>
+                    <td>C+</td>
+                    <td>≥ 65</td>
+                    <td>Below Average - Notable issues</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>≥ 60</td>
+                    <td>Poor - Significant gaps</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>≥ 50</td>
+                    <td>Very Poor - Major deficiencies</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>&lt; 50</td>
+                    <td>Failing - Not production-ready</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Category Breakdown</h2>
+        <p>KPIs are computed at multiple granularity levels:</p>
+        <ul>
+            <li><strong>SAST</strong> (80 scenarios): SQL Injection, XSS, SSRF, Command Injection, XXE, etc.</li>
+            <li><strong>DAST</strong> (20 scenarios): Runtime vulnerability detection</li>
+            <li><strong>SCA</strong> (40 scenarios): Vulnerable dependencies, reachability</li>
+            <li><strong>SECRET</strong> (30 scenarios): Credential and API key detection</li>
+            <li><strong>CONTAINER</strong> (20 scenarios): Dockerfile misconfigurations</li>
+            <li><strong>IAC</strong> (20 scenarios): Terraform, Kubernetes, Helm misconfigs</li>
+            <li><strong>CI/CD</strong> (10 scenarios): Pipeline security misconfigurations</li>
+        </ul>
+
+        <h2>AI Capability Evaluation</h2>
+        <p>Six AI capabilities are evaluated when applicable:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Capability</th>
+                    <th>Weight</th>
+                    <th>What It Measures</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fix Generation</td>
+                    <td>25%</td>
+                    <td>Can the tool generate correct code fixes?</td>
+                </tr>
+                <tr>
+                    <td>Remediation Guidance</td>
+                    <td>20%</td>
+                    <td>Does it provide actionable remediation steps?</td>
+                </tr>
+                <tr>
+                    <td>Root Cause Analysis</td>
+                    <td>20%</td>
+                    <td>Can it identify the underlying vulnerability cause?</td>
+                </tr>
+                <tr>
+                    <td>Reachability Analysis</td>
+                    <td>15%</td>
+                    <td>Can it determine if a vulnerability is reachable?</td>
+                </tr>
+                <tr>
+                    <td>Prioritization</td>
+                    <td>10%</td>
+                    <td>Does it correctly prioritize findings?</td>
+                </tr>
+                <tr>
+                    <td>Risk Ranking</td>
+                    <td>10%</td>
+                    <td>Does it accurately rank risk levels?</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Usage</h2>
+        <h3>Running the KPI Calculator</h3>
+        <pre><code># Demo mode (synthetic data)
+python scripts/kpi_calculator.py --demo
+
+# With real scan results (SARIF format)
+python scripts/kpi_calculator.py \
+  --scan-results path/to/results.sarif \
+  --format sarif \
+  --vendor "Vendor A"</code></pre>
+
+        <h3>Scoring Rubric Penalty Rules</h3>
+        <ul>
+            <li><strong>Critical Miss</strong>: -0.5 per missed HIGH/CRITICAL vulnerability (max -10)</li>
+            <li><strong>Excessive FP</strong>: -0.3 per % above 20% FPR threshold (max -5)</li>
+            <li><strong>Category Zero</strong>: -3.0 per category with zero score (max -15)</li>
+        </ul>
+
+        <h3>Minimum Viable Thresholds</h3>
+        <p>A vendor is considered <strong>production-ready</strong> only if meeting:</p>
+        <ul>
+            <li>Precision &ge; 60%</li>
+            <li>Recall &ge; 50%</li>
+            <li>F1 Score &ge; 55%</li>
+            <li>FPR &le; 30%</li>
+            <li>&ge; 4 categories covered</li>
+        </ul>
+    </div>
+</body>
+</html>

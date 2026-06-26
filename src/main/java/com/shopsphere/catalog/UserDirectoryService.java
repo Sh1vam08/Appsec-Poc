@@ -33,14 +33,18 @@ public class UserDirectoryService {
     public String searchVulnerable(String username) {
         // BENCH-SAST-013
         String filter = "(uid=" + username + ")";
+        DirContext ctx = null;
         try {
-            DirContext ctx = getContext();
+            ctx = getContext();
             NamingEnumeration<SearchResult> results = ctx.search(BASE_DN, filter, new SearchControls());
-            ctx.close();
             return results.hasMore() ? "User found" : "User not found";
         } catch (Exception e) {
             // Graceful fallback for runtime testing when no LDAP directory server runs
             return "LDAP execution fallback - Vulnerable search constructed filter: " + filter;
+        } finally {
+            if (ctx != null) {
+                try { ctx.close(); } catch (Exception e) { /* ignore */ }
+            }
         }
     }
 
@@ -52,13 +56,17 @@ public class UserDirectoryService {
         // BENCH-SAST-014
         String sanitized = escapeLDAPSearchFilter(username);
         String filter = "(uid=" + sanitized + ")";
+        DirContext ctx = null;
         try {
-            DirContext ctx = getContext();
+            ctx = getContext();
             NamingEnumeration<SearchResult> results = ctx.search(BASE_DN, filter, new SearchControls());
-            ctx.close();
             return results.hasMore() ? "User found" : "User not found";
         } catch (Exception e) {
             return "LDAP execution fallback - Safe search constructed filter: " + filter;
+        } finally {
+            if (ctx != null) {
+                try { ctx.close(); } catch (Exception e) { /* ignore */ }
+            }
         }
     }
 
@@ -70,11 +78,16 @@ public class UserDirectoryService {
     private String searchUnreachable(String username) {
         // BENCH-SAST-015
         String filter = "(uid=" + username + ")";
+        DirContext ctx = null;
         try {
-            DirContext ctx = getContext();
+            ctx = getContext();
             ctx.search(BASE_DN, filter, new SearchControls());
         } catch (Exception e) {
             // ignore
+        } finally {
+            if (ctx != null) {
+                try { ctx.close(); } catch (Exception e) { /* ignore */ }
+            }
         }
         return "";
     }
@@ -86,8 +99,9 @@ public class UserDirectoryService {
      */
     public String searchFrameworkProtected(String username) {
         // BENCH-SAST-016
+        DirContext ctx = null;
         try {
-            DirContext ctx = getContext();
+            ctx = getContext();
             SearchControls sc = new SearchControls();
             sc.setSearchScope(SearchControls.SUBTREE_SCOPE);
             
@@ -99,10 +113,13 @@ public class UserDirectoryService {
                 sc
             );
             
-            ctx.close();
             return results.hasMore() ? "User found" : "User not found";
         } catch (Exception e) {
             return "LDAP execution fallback - Framework-protected query binding verified.";
+        } finally {
+            if (ctx != null) {
+                try { ctx.close(); } catch (Exception e) { /* ignore */ }
+            }
         }
     }
 

@@ -57,4 +57,20 @@ public class SecurityConfig {
 
         return http.build();
     }
+
+    /**
+     * Disable Spring Security's default StrictHttpFirewall blocking of path traversal vectors.
+     * Without this, DAST tools cannot legitimately test the Path Traversal vulnerabilities
+     * because the framework intercepts requests containing '../' or encoded variants.
+     */
+    @Bean
+    public org.springframework.security.web.firewall.HttpFirewall allowUrlEncodedSlashHttpFirewall() {
+        org.springframework.security.web.firewall.StrictHttpFirewall firewall = new org.springframework.security.web.firewall.StrictHttpFirewall();
+        firewall.setAllowUrlEncodedSlash(true);
+        firewall.setAllowUrlEncodedDoubleSlash(true);
+        firewall.setAllowUrlEncodedPeriod(true);
+        firewall.setAllowBackSlash(true);
+        firewall.setAllowUrlEncodedPercent(true);
+        return firewall;
+    }
 }

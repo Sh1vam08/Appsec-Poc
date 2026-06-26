@@ -1,0 +1,226 @@
+[
+  {
+    "cwe": "CWE-89",
+    "total": 6,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-943",
+    "total": 4,
+    "f1": 0.5,
+    "precision": 0.5,
+    "recall": 0.5
+  },
+  {
+    "cwe": "CWE-78",
+    "total": 4,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-90",
+    "total": 4,
+    "f1": 0.5,
+    "precision": 0.5,
+    "recall": 0.5
+  },
+  {
+    "cwe": "CWE-643",
+    "total": 4,
+    "f1": 0.5,
+    "precision": 0.5,
+    "recall": 0.5
+  },
+  {
+    "cwe": "CWE-611",
+    "total": 4,
+    "f1": 0.8,
+    "precision": 0.666667,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-917",
+    "total": 4,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-79",
+    "total": 14,
+    "f1": 0.857143,
+    "precision": 0.857143,
+    "recall": 0.857143
+  },
+  {
+    "cwe": "CWE-918",
+    "total": 6,
+    "f1": 0.8,
+    "precision": 1.0,
+    "recall": 0.666667
+  },
+  {
+    "cwe": "CWE-601",
+    "total": 6,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-22",
+    "total": 6,
+    "f1": 0.5,
+    "precision": 1.0,
+    "recall": 0.333333
+  },
+  {
+    "cwe": "CWE-502",
+    "total": 20,
+    "f1": 0.83871,
+    "precision": 1.0,
+    "recall": 0.722222
+  },
+  {
+    "cwe": "CWE-470",
+    "total": 4,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-287",
+    "total": 10,
+    "f1": 0.857143,
+    "precision": 0.857143,
+    "recall": 0.857143
+  },
+  {
+    "cwe": "CWE-862",
+    "total": 6,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-327",
+    "total": 4,
+    "f1": 0.666667,
+    "precision": 1.0,
+    "recall": 0.5
+  },
+  {
+    "cwe": "CWE-798",
+    "total": 30,
+    "f1": 0.744186,
+    "precision": 1.0,
+    "recall": 0.592593
+  },
+  {
+    "cwe": "CWE-200",
+    "total": 4,
+    "f1": 0.666667,
+    "precision": 1.0,
+    "recall": 0.5
+  },
+  {
+    "cwe": "CWE-1104",
+    "total": 8,
+    "f1": 0.666667,
+    "precision": 1.0,
+    "recall": 0.5
+  },
+  {
+    "cwe": "CWE-94",
+    "total": 8,
+    "f1": 0.857143,
+    "precision": 1.0,
+    "recall": 0.75
+  },
+  {
+    "cwe": "CWE-20",
+    "total": 8,
+    "f1": 0.857143,
+    "precision": 1.0,
+    "recall": 0.75
+  },
+  {
+    "cwe": "CWE-732",
+    "total": 6,
+    "f1": 0.888889,
+    "precision": 1.0,
+    "recall": 0.8
+  },
+  {
+    "cwe": "CWE-352",
+    "total": 2,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-434",
+    "total": 2,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-284",
+    "total": 12,
+    "f1": 0.8,
+    "precision": 1.0,
+    "recall": 0.666667
+  },
+  {
+    "cwe": "CWE-321",
+    "total": 6,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-250",
+    "total": 12,
+    "f1": 0.6,
+    "precision": 0.75,
+    "recall": 0.5
+  },
+  {
+    "cwe": "CWE-269",
+    "total": 2,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  {
+    "cwe": "CWE-1059",
+    "total": 2,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-703",
+    "total": 2,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  {
+    "cwe": "CWE-311",
+    "total": 2,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  {
+    "cwe": "CWE-778",
+    "total": 2,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+  }
+]

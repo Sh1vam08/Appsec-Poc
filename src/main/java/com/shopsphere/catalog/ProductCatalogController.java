@@ -31,6 +31,16 @@ public class ProductCatalogController {
     }
 
     /**
+     * BENCH-SAST-081: Blind SQL Injection (Vulnerable Variant)
+     * Maps to: GET /api/v1/products/search/blind
+     */
+    @GetMapping("/api/v1/products/search/blind")
+    public String getBlindVulnerable(@RequestParam String username) {
+        boolean exists = sqlInjectionService.checkUserExistsBlind(username);
+        return exists ? "User exists" : "User does not exist";
+    }
+
+    /**
      * BENCH-SAST-002: SQL Injection (Safe Variant)
      * Maps to: GET /api/safe/sqli
      */

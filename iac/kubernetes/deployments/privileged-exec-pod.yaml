@@ -1,0 +1,33 @@
+# BENCH-CONT-025: Pod with over-privileged execution context
+# Tests: Container privilege and execution analysis
+apiVersion: v1
+kind: Pod
+metadata:
+  name: privileged-exec-pod
+  labels:
+    benchmark: container-privilege-exec
+spec:
+  containers:
+  - name: overprivileged-app
+    image: alpine:3.18
+    securityContext:
+      runAsUser: 0
+      runAsGroup: 0
+      privileged: true
+      allowPrivilegeEscalation: true
+      readOnlyRootFilesystem: false
+      capabilities:
+        add:
+          - SYS_ADMIN
+          - NET_ADMIN
+          - SYS_PTRACE
+          - DAC_OVERRIDE
+          - NET_RAW
+    volumeMounts:
+    - mountPath: /host
+      name: host-root
+  volumes:
+  - name: host-root
+    hostPath:
+      path: /
+      type: Directory

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Stored XSS - Vulnerable</title>
+</head>
+<body>
+    <h1>Stored XSS Demonstration (Vulnerable)</h1>
+    <div class="comment-box">
+        <h3>Latest User Comment:</h3>
+        <!-- BENCH-SAST-029: Stored XSS Sink -->
+        <!-- th:utext renders raw unescaped HTML, allowing script injection -->
+        <p th:utext="${comment}">Placeholder comment</p>
+    </div>
+</body>
+</html>

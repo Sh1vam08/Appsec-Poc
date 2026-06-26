@@ -1,0 +1,13 @@
+# BENCH-CONT-013: Image from unsigned/unverified registry
+# Tests: Image integrity verification
+# Pulls from a non-existent internal registry without digest pinning.
+# A scanner should flag: no content trust, no digest, untrusted source.
+
+FROM my-internal-registry.example.com:5000/base-app:latest
+
+# No digest pinning (should be @sha256:...)
+# No Docker Content Trust verification
+
+WORKDIR /app
+COPY . /app
+ENTRYPOINT ["/bin/sh"]

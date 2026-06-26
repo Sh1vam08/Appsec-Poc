@@ -1,0 +1,16 @@
+# BENCH-IAC-039: Kubernetes NetworkPolicy allowing all traffic
+# Tests: Network configuration analysis (IaC context)
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-all-traffic
+  namespace: default
+spec:
+  podSelector: {}  # Applies to all pods
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - {}  # Allow all ingress from any source
+  egress:
+    - {}  # Allow all egress to any destination

@@ -26,10 +26,11 @@ public class MemberLoginController {
      * Maps to: POST /api/dast/vulnerable/auth
      */
     @PostMapping("/api/v1/auth/member-login")
-    public ResponseEntity<String> loginVulnerable(@RequestParam String username, @RequestParam String password) {
+    public ResponseEntity<String> loginVulnerable(@RequestParam String username, @RequestParam String password, jakarta.servlet.http.HttpServletRequest request) {
         // BENCH-DAST-015
         boolean authenticated = service.authenticateVulnerable(username, password);
         if (authenticated) {
+            request.getSession(true).setAttribute("USER", username);
             return ResponseEntity.ok("Login successful (Vulnerable Endpoint)");
         }
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials");
@@ -40,10 +41,11 @@ public class MemberLoginController {
      * Maps to: POST /api/dast/safe/auth
      */
     @PostMapping("/api/v1/auth/member-login/secure")
-    public ResponseEntity<String> loginSafe(@RequestParam String username, @RequestParam String password) {
+    public ResponseEntity<String> loginSafe(@RequestParam String username, @RequestParam String password, jakarta.servlet.http.HttpServletRequest request) {
         // BENCH-DAST-016
         boolean authenticated = service.authenticateSafe(username, password);
         if (authenticated) {
+            request.getSession(true).setAttribute("USER", username);
             return ResponseEntity.ok("Login successful (Safe Endpoint)");
         }
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials");

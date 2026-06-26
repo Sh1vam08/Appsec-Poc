@@ -1,0 +1,17 @@
+# BENCH-CONT-014: Container image without provenance metadata
+# Tests: Software provenance tracking
+# No LABEL, no OCI metadata, no maintainer info, no source URL.
+# A scanner should flag the absence of provenance tracking information.
+
+FROM alpine:3.18
+
+# Intentionally NO metadata labels:
+# No LABEL maintainer
+# No LABEL org.opencontainers.image.source
+# No LABEL org.opencontainers.image.version
+# No LABEL org.opencontainers.image.vendor
+# No LABEL org.opencontainers.image.licenses
+
+WORKDIR /app
+RUN echo "no provenance" > /app/info.txt
+ENTRYPOINT ["/bin/sh"]

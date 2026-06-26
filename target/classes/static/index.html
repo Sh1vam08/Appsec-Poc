@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSphere — Premium E-Commerce & Digital Goods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #08090c;
+            --surface-bg: #12131a;
+            --surface-bg-hover: #1b1d28;
+            --border-color: rgba(255, 255, 255, 0.06);
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --accent: #06b6d4;
+            --accent-hover: #0891b2;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --glow-gradient: linear-gradient(135deg, var(--primary), var(--accent));
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 40%);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Top Developer Tools Panel */
+        .dev-tools-panel {
+            background-color: #121420;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            z-index: 100;
+        }
+
+        .dev-badge {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(6, 182, 212, 0.2));
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #a5b4fc;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+        }
+
+        .dev-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .dev-links a {
+            color: var(--text-muted);
+            transition: color 0.2s ease;
+            font-weight: 500;
+        }
+
+        .dev-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Navigation Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(8, 9, 12, 0.7);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 90;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 800;
+            background: var(--glow-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.03em;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        /* Hero / Search Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.25rem;
+            background: linear-gradient(135deg, #ffffff 50%, #a5b4fc 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-desc {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        /* Forms */
+        .search-box {
+            display: flex;
+            background: var(--surface-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 0.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .search-box:focus-within {
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .search-input {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #ffffff;
+            padding: 0 1.25rem;
+            flex-grow: 1;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 0.75rem 1.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* E-commerce Storefront Body */
+        .store-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .store-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Product Cards Grid */
+        .catalog-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+        }
+
+        .filters-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-btn {
+            background-color: var(--surface-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            background-color: var(--surface-bg-hover);
+            color: #ffffff;
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background-color: var(--surface-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.25);
+        }
+
+        .product-img {
+            background: linear-gradient(135deg, #1b1d2a, #0c0d12);
+            border-radius: 12px;
+            height: 160px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .product-desc {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .card-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .spec-link {
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-align: center;
+            text-decoration: underline;
+            margin-top: 0.25rem;
+            display: block;
+        }
+
+        /* Sidebar Actions (Cart, Profile, Support Desk) */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .side-panel {
+            background-color: var(--surface-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+
+        .panel-title {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+        }
+
+        .form-input {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.6rem 0.75rem;
+            color: #ffffff;
+            font-family: inherit;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        .form-input:focus {
+            border-color: var(--primary);
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        /* Review and Support Lists (Crawlable Areas) */
+        .reviews-list {
+            margin-top: 3rem;
+            background-color: var(--surface-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .review-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
+
+        .review-item:last-child {
+            border-bottom: none;
+        }
+
+        .review-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: auto;
+            background-color: #0c0d12;
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .social-share {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .share-link {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+        }
+
+        .share-link:hover {
+            background-color: var(--surface-bg-hover);
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Subtle Dev Tools Top Bar for Evaluators -->
+    <div class="dev-tools-panel">
+        <div>
+            <span class="dev-badge">BENCHMARK ACTIVE</span>
+        </div>
+        <div class="dev-links">
+            <a href="/swagger-ui/index.html" id="nav-swagger">API Docs (Swagger UI)</a>
+            <a href="/h2-console" id="nav-h2">H2 Database Console</a>
+            <a href="/docs/kpi-framework.html" id="nav-kpi">KPI Framework</a>
+        </div>
+    </div>
+
+    <!-- Store Header -->
+    <header class="header">
+        <div class="logo">ShopSphere</div>
+        <nav class="nav-menu">
+            <a href="/api/v1/products/filter?username=all" class="nav-link">All Products</a>
+            <a href="/api/v1/products/filter?username=hardware" class="nav-link">Hardware</a>
+            <a href="/api/v1/products/filter?username=audio" class="nav-link">Audio</a>
+            <a href="/api/v1/products/filter?username=peripherals" class="nav-link">Peripherals</a>
+        </nav>
+    </header>
+
+    <!-- Hero / Catalog Search -->
+    <section class="hero">
+        <h1 class="hero-title">Experience Premium Quality Products</h1>
+        <p class="hero-desc">Your ultimate marketplace for top-tier digital hardware, modern audio solutions, and ergonomic computer accessories.</p>
+        
+        <!-- Search form for products (SQL Injection target endpoint - expects username parameter) -->
+        <form action="/api/v1/products/search" method="GET" class="search-box">
+            <input type="text" name="username" class="search-input" placeholder="Search product catalog (e.g. admin, user)..." required>
+            <button type="submit" class="btn">Search</button>
+        </form>
+    </section>
+
+    <!-- Main Storefront Content -->
+    <main class="store-content">
+        
+        <!-- Left Side: Product Catalog Grid -->
+        <div class="catalog-section">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <div class="filters-row">
+                    <!-- Category filtering endpoints (NoSQL injection target endpoints - expect username parameter) -->
+                    <a href="/api/v1/products/filter?username=hardware" class="filter-btn">Hardware</a>
+                    <a href="/api/v1/products/filter?username=audio" class="filter-btn">Audio & Music</a>
+                    <a href="/api/v1/products/filter?username=peripherals" class="filter-btn">Peripherals</a>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div>
+                        <div class="product-img">🖥️</div>
+                        <h3 class="product-title">Ultra-Wide 34" Monitor</h3>
+                        <p class="product-desc">Immersive IPS display featuring a sleek curve, 144Hz refresh rate, and professional color gamut coverage.</p>
+                    </div>
+                    <div>
+                        <div class="product-footer">
+                            <span class="product-price">$699.99</span>
+                        </div>
+                        <div class="card-actions">
+                            <!-- Email linking for updates (CSRF updateEmail endpoint expects email parameter) -->
+                            <form action="/api/v1/cart/items" method="POST">
+                                <input type="hidden" name="email" value="monitor-subscriber@shopsphere.com">
+                                <button type="submit" class="btn w-full">Add to Cart</button>
+                            </form>
+                            <!-- Path traversal / download endpoint expects filepath parameter -->
+                            <a href="/api/v1/orders/invoice/download?filepath=src/main/resources/schema.sql" class="spec-link">Download Product Sheet</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div>
+                        <div class="product-img">🎧</div>
+                        <h3 class="product-title">ANC Headset Pro</h3>
+                        <p class="product-desc">Superior noise-cancelling headphones featuring studio-grade custom audio drivers and a 40-hour long battery life.</p>
+                    </div>
+                    <div>
+                        <div class="product-footer">
+                            <span class="product-price">$299.99</span>
+                        </div>
+                        <div class="card-actions">
+                            <form action="/api/v1/cart/items" method="POST">
+                                <input type="hidden" name="email" value="headset-subscriber@shopsphere.com">
+                                <button type="submit" class="btn w-full">Add to Cart</button>
+                            </form>
+                            <a href="/api/v1/orders/invoice/download?filepath=src/main/resources/schema.sql" class="spec-link">Download Product Sheet</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div>
+                        <div class="product-img">⌨️</div>
+                        <h3 class="product-title">Tactile Mechanical Keyboard</h3>
+                        <p class="product-desc">Hot-swappable switches, sound-damped chassis, customizable RGB mapping, and solid aluminum faceplate.</p>
+                    </div>
+                    <div>
+                        <div class="product-footer">
+                            <span class="product-price">$149.99</span>
+                        </div>
+                        <div class="card-actions">
+                            <form action="/api/v1/cart/items" method="POST">
+                                <input type="hidden" name="email" value="keyboard-subscriber@shopsphere.com">
+                                <button type="submit" class="btn w-full">Add to Cart</button>
+                            </form>
+                            <a href="/api/v1/orders/invoice/download?filepath=src/main/resources/schema.sql" class="spec-link">Download Product Sheet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Sidebar panels with forms (Checkout, Login, Support Desk) -->
+        <div class="sidebar">
+            
+            <!-- Quick Checkout & Email Linking (CSRF/API Security target) -->
+            <div class="side-panel">
+                <h3 class="panel-title">Your Shopping Cart</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Items: 3 items in cart ($1,149.97)</p>
+                
+                <!-- Link email form (maps to the CSRF updateEmail endpoint - expects email) -->
+                <form action="/api/v1/cart/items" method="POST" style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Link Email for Recovery</label>
+                        <input type="email" name="email" class="form-input" placeholder="user@example.com" required>
+                    </div>
+                    <button type="submit" class="btn w-full">Link Email</button>
+                </form>
+
+                <!-- Action form mapping checkout endpoints (GET request) -->
+                <a href="/api/v1/checkout/place-order" class="btn w-full" style="display: block; text-align: center;">Proceed to Checkout</a>
+            </div>
+
+            <!-- Customer Authentication Login Panel (GET request - expects username and password) -->
+            <div class="side-panel">
+                <h3 class="panel-title">Customer Login</h3>
+                <form action="/api/v1/auth/customer-login" method="GET">
+                    <div class="form-group">
+                        <label class="form-label">Username</label>
+                        <input type="text" name="username" class="form-input" placeholder="Enter username" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" name="password" class="form-input" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn w-full">Sign In</button>
+                </form>
+            </div>
+
+            <!-- Support / Help Center Query (Reflected XSS target - GET expects input) -->
+            <div class="side-panel">
+                <h3 class="panel-title">Support & Help desk</h3>
+                <form action="/api/v1/support/query" method="GET">
+                    <div class="form-group">
+                        <label class="form-label">Search support topics</label>
+                        <input type="text" name="input" class="form-input" placeholder="Type question..." required>
+                    </div>
+                    <button type="submit" class="btn w-full">Search Support</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Stored Review Feedback (Stored XSS Target - GET expects comment) -->
+    <section class="store-content" style="grid-template-columns: 1fr; padding-top: 0;">
+        <div class="reviews-list">
+            <h2>Product Reviews & Customer Feedback</h2>
+            
+            <!-- Stored Review Form submission -->
+            <form action="/reviews/product" method="GET" style="margin: 1.5rem 0; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color);">
+                <div class="form-group">
+                    <label class="form-label">Write your feedback</label>
+                    <textarea name="comment" class="form-input" style="height: 100px; resize: vertical;" placeholder="Leave a review comment..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit Review</button>
+            </form>
+
+            <div class="review-item">
+                <div class="review-meta">
+                    <strong>John Doe</strong>
+                    <span>June 24, 2026</span>
+                </div>
+                <p class="review-text">The Ultra-Wide monitor has changed the way I work. Perfect sizing and gorgeous colors!</p>
+            </div>
+
+            <div class="review-item">
+                <div class="review-meta">
+                    <strong>Sarah Smith</strong>
+                    <span>June 23, 2026</span>
+                </div>
+                <p class="review-text">Amazing noise cancelling headphones. Battery life is absolutely incredible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Open Redirect triggers -->
+    <footer class="footer">
+        <p>© 2026 ShopSphere E-Commerce Platform Suite. Developed for Enterprise AppSec Benchmarking.</p>
+        <div class="social-share">
+            <span>Share via:</span>
+            <!-- Open Redirect target urls (GET expects url) -->
+            <a href="/api/v1/share/redirect?url=https://twitter.com" class="share-link">Twitter</a>
+            <a href="/api/v1/share/redirect?url=https://facebook.com" class="share-link">Facebook</a>
+            <a href="/api/v1/share/redirect?url=https://linkedin.com" class="share-link">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth out the UI for users while leaving endpoints vulnerable for DAST tools
+        
+        // Handle category filter links to show an alert instead of navigating to raw JSON
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+                fetch(e.target.href)
+                    .then(res => res.json())
+                    .then(data => {
+                        alert('Filtered products applied successfully! (Background process complete)');
+                    })
+                    .catch(err => {
+                        alert('Failed to load products');
+                    });
+            });
+        });
+
+        // Handle Add to Cart forms
+        document.querySelectorAll('form[action="/api/v1/cart/items"]').forEach(form => {
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const formData = new FormData(form);
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new URLSearchParams(formData)
+                }).then(() => {
+                    alert('Item successfully added to cart!');
+                }).catch(() => {
+                    alert('Item successfully added to cart!');
+                });
+            });
+        });
+
+        // Show a quick alert if we arrived here from a cart addition redirect
+        if (window.location.search.includes('cartAdded=true')) {
+            alert('Item successfully added to your cart!');
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    </script>
+</body>
+</html>

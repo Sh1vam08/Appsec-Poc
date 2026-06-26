@@ -1,0 +1,2471 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-06-24T04:47:25.495102+00:00",
+    "vendor_name": "Demo Vendor (Synthetic)",
+    "benchmark_version": "1.0.0",
+    "total_benchmarks_evaluated": 214,
+    "scan_results_count": 110,
+    "calculator_version": "1.0.0"
+  },
+  "summary": {
+    "composite_score": 79.81,
+    "grade": "B",
+    "precision": 0.927273,
+    "recall": 0.71831,
+    "accuracy": 0.775701,
+    "f1_score": 0.809524,
+    "detection_coverage": 0.71831,
+    "false_positive_rate": 0.111111,
+    "false_negative_rate": 0.28169,
+    "severity_accuracy": 0.809091
+  },
+  "confusion_matrix": {
+    "true_positives": 102,
+    "true_negatives": 64,
+    "false_positives": 8,
+    "false_negatives": 40,
+    "total": 214
+  },
+  "category_breakdown": {
+    "SAST": {
+      "total_benchmarks": 84,
+      "true_positives": 32,
+      "true_negatives": 37,
+      "false_positives": 5,
+      "false_negatives": 10,
+      "precision": 0.864865,
+      "recall": 0.761905,
+      "accuracy": 0.821429,
+      "f1_score": 0.810127,
+      "false_positive_rate": 0.119048
+    },
+    "DAST": {
+      "total_benchmarks": 20,
+      "true_positives": 7,
+      "true_negatives": 9,
+      "false_positives": 1,
+      "false_negatives": 3,
+      "precision": 0.875,
+      "recall": 0.7,
+      "accuracy": 0.8,
+      "f1_score": 0.777778,
+      "false_positive_rate": 0.1
+    },
+    "SCA": {
+      "total_benchmarks": 40,
+      "true_positives": 31,
+      "true_negatives": 0,
+      "false_positives": 0,
+      "false_negatives": 9,
+      "precision": 1.0,
+      "recall": 0.775,
+      "accuracy": 0.775,
+      "f1_score": 0.873239,
+      "false_positive_rate": 0.0
+    },
+    "SECRET": {
+      "total_benchmarks": 30,
+      "true_positives": 20,
+      "true_negatives": 0,
+      "false_positives": 0,
+      "false_negatives": 10,
+      "precision": 1.0,
+      "recall": 0.666667,
+      "accuracy": 0.666667,
+      "f1_score": 0.8,
+      "false_positive_rate": 0.0
+    },
+    "CONTAINER": {
+      "total_benchmarks": 20,
+      "true_positives": 8,
+      "true_negatives": 9,
+      "false_positives": 1,
+      "false_negatives": 2,
+      "precision": 0.888889,
+      "recall": 0.8,
+      "accuracy": 0.85,
+      "f1_score": 0.842105,
+      "false_positive_rate": 0.1
+    },
+    "IAC": {
+      "total_benchmarks": 20,
+      "true_positives": 4,
+      "true_negatives": 9,
+      "false_positives": 1,
+      "false_negatives": 6,
+      "precision": 0.8,
+      "recall": 0.4,
+      "accuracy": 0.65,
+      "f1_score": 0.533333,
+      "false_positive_rate": 0.1
+    }
+  },
+  "cwe_breakdown": {
+    "CWE-89": {
+      "total_benchmarks": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CWE-943": {
+      "total_benchmarks": 4,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1_score": 0.5
+    },
+    "CWE-78": {
+      "total_benchmarks": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CWE-90": {
+      "total_benchmarks": 4,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1_score": 0.5
+    },
+    "CWE-643": {
+      "total_benchmarks": 4,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1_score": 0.5
+    },
+    "CWE-611": {
+      "total_benchmarks": 4,
+      "precision": 0.666667,
+      "recall": 1.0,
+      "f1_score": 0.8
+    },
+    "CWE-917": {
+      "total_benchmarks": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CWE-79": {
+      "total_benchmarks": 14,
+      "precision": 0.857143,
+      "recall": 0.857143,
+      "f1_score": 0.857143
+    },
+    "CWE-918": {
+      "total_benchmarks": 6,
+      "precision": 1.0,
+      "recall": 0.666667,
+      "f1_score": 0.8
+    },
+    "CWE-601": {
+      "total_benchmarks": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CWE-22": {
+      "total_benchmarks": 6,
+      "precision": 1.0,
+      "recall": 0.333333,
+      "f1_score": 0.5
+    },
+    "CWE-502": {
+      "total_benchmarks": 20,
+      "precision": 1.0,
+      "recall": 0.722222,
+      "f1_score": 0.83871
+    },
+    "CWE-470": {
+      "total_benchmarks": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CWE-287": {
+      "total_benchmarks": 10,
+      "precision": 0.857143,
+      "recall": 0.857143,
+      "f1_score": 0.857143
+    },
+    "CWE-862": {
+      "total_benchmarks": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CWE-327": {
+      "total_benchmarks": 4,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1_score": 0.666667
+    },
+    "CWE-798": {
+      "total_benchmarks": 30,
+      "precision": 1.0,
+      "recall": 0.592593,
+      "f1_score": 0.744186
+    },
+    "CWE-200": {
+      "total_benchmarks": 4,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1_score": 0.666667
+    },
+    "CWE-1104": {
+      "total_benchmarks": 8,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1_score": 0.666667
+    },
+    "CWE-94": {
+      "total_benchmarks": 8,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1_score": 0.857143
+    },
+    "CWE-20": {
+      "total_benchmarks": 8,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1_score": 0.857143
+    },
+    "CWE-732": {
+      "total_benchmarks": 6,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1_score": 0.888889
+    },
+    "CWE-352": {
+      "total_benchmarks": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CWE-434": {
+      "total_benchmarks": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CWE-284": {
+      "total_benchmarks": 12,
+      "precision": 1.0,
+      "recall": 0.666667,
+      "f1_score": 0.8
+    },
+    "CWE-321": {
+      "total_benchmarks": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CWE-250": {
+      "total_benchmarks": 12,
+      "precision": 0.75,
+      "recall": 0.5,
+      "f1_score": 0.6
+    },
+    "CWE-269": {
+      "total_benchmarks": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0
+    },
+    "CWE-1059": {
+      "total_benchmarks": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CWE-703": {
+      "total_benchmarks": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    },
+    "CWE-311": {
+      "total_benchmarks": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0
+    },
+    "CWE-778": {
+      "total_benchmarks": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0
+    }
+  },
+  "ai_capability_scores": {
+    "fix_generation": {
+      "applicable_count": 41,
+      "correct_count": 30,
+      "score": 0.731707
+    },
+    "remediation_guidance": {
+      "applicable_count": 101,
+      "correct_count": 71,
+      "score": 0.70297
+    },
+    "root_cause_analysis": {
+      "applicable_count": 101,
+      "correct_count": 71,
+      "score": 0.70297
+    },
+    "reachability_analysis": {
+      "applicable_count": 124,
+      "correct_count": 63,
+      "score": 0.508065
+    },
+    "prioritization": {
+      "applicable_count": 214,
+      "correct_count": 102,
+      "score": 0.476636
+    },
+    "risk_ranking": {
+      "applicable_count": 214,
+      "correct_count": 102,
+      "score": 0.476636
+    }
+  },
+  "benchmark_results": [
+    {
+      "benchmark_id": "BENCH-SAST-001",
+      "category": "SAST",
+      "cwe": "CWE-89",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-002",
+      "category": "SAST",
+      "cwe": "CWE-89",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-003",
+      "category": "SAST",
+      "cwe": "CWE-89",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-004",
+      "category": "SAST",
+      "cwe": "CWE-89",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-005",
+      "category": "SAST",
+      "cwe": "CWE-943",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-006",
+      "category": "SAST",
+      "cwe": "CWE-943",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": true,
+      "classification": "FALSE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-007",
+      "category": "SAST",
+      "cwe": "CWE-943",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-008",
+      "category": "SAST",
+      "cwe": "CWE-943",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-009",
+      "category": "SAST",
+      "cwe": "CWE-78",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-010",
+      "category": "SAST",
+      "cwe": "CWE-78",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-011",
+      "category": "SAST",
+      "cwe": "CWE-78",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-012",
+      "category": "SAST",
+      "cwe": "CWE-78",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-013",
+      "category": "SAST",
+      "cwe": "CWE-90",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-014",
+      "category": "SAST",
+      "cwe": "CWE-90",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": true,
+      "classification": "FALSE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-015",
+      "category": "SAST",
+      "cwe": "CWE-90",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-016",
+      "category": "SAST",
+      "cwe": "CWE-90",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-017",
+      "category": "SAST",
+      "cwe": "CWE-643",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-018",
+      "category": "SAST",
+      "cwe": "CWE-643",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": true,
+      "classification": "FALSE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-019",
+      "category": "SAST",
+      "cwe": "CWE-643",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-020",
+      "category": "SAST",
+      "cwe": "CWE-643",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-021",
+      "category": "SAST",
+      "cwe": "CWE-611",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-022",
+      "category": "SAST",
+      "cwe": "CWE-611",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": true,
+      "classification": "FALSE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-023",
+      "category": "SAST",
+      "cwe": "CWE-611",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-024",
+      "category": "SAST",
+      "cwe": "CWE-611",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-025",
+      "category": "SAST",
+      "cwe": "CWE-917",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-026",
+      "category": "SAST",
+      "cwe": "CWE-917",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-027",
+      "category": "SAST",
+      "cwe": "CWE-917",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-028",
+      "category": "SAST",
+      "cwe": "CWE-917",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-029",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-030",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-031",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-032",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-033",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-034",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": true,
+      "classification": "FALSE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-035",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-036",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-037",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-038",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-039",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-040",
+      "category": "SAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-041",
+      "category": "SAST",
+      "cwe": "CWE-918",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-042",
+      "category": "SAST",
+      "cwe": "CWE-918",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-043",
+      "category": "SAST",
+      "cwe": "CWE-918",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-044",
+      "category": "SAST",
+      "cwe": "CWE-918",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-045",
+      "category": "SAST",
+      "cwe": "CWE-601",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-046",
+      "category": "SAST",
+      "cwe": "CWE-601",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-047",
+      "category": "SAST",
+      "cwe": "CWE-601",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-048",
+      "category": "SAST",
+      "cwe": "CWE-601",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-049",
+      "category": "SAST",
+      "cwe": "CWE-22",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-050",
+      "category": "SAST",
+      "cwe": "CWE-22",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-051",
+      "category": "SAST",
+      "cwe": "CWE-22",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-052",
+      "category": "SAST",
+      "cwe": "CWE-22",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-053",
+      "category": "SAST",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-054",
+      "category": "SAST",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-055",
+      "category": "SAST",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-056",
+      "category": "SAST",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-057",
+      "category": "SAST",
+      "cwe": "CWE-470",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-058",
+      "category": "SAST",
+      "cwe": "CWE-470",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-059",
+      "category": "SAST",
+      "cwe": "CWE-470",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-060",
+      "category": "SAST",
+      "cwe": "CWE-470",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-061",
+      "category": "SAST",
+      "cwe": "CWE-287",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-062",
+      "category": "SAST",
+      "cwe": "CWE-287",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-063",
+      "category": "SAST",
+      "cwe": "CWE-287",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-064",
+      "category": "SAST",
+      "cwe": "CWE-287",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-065",
+      "category": "SAST",
+      "cwe": "CWE-862",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-066",
+      "category": "SAST",
+      "cwe": "CWE-862",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-067",
+      "category": "SAST",
+      "cwe": "CWE-862",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-068",
+      "category": "SAST",
+      "cwe": "CWE-862",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-069",
+      "category": "SAST",
+      "cwe": "CWE-327",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-070",
+      "category": "SAST",
+      "cwe": "CWE-327",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-071",
+      "category": "SAST",
+      "cwe": "CWE-327",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-072",
+      "category": "SAST",
+      "cwe": "CWE-327",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-073",
+      "category": "SAST",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-074",
+      "category": "SAST",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-075",
+      "category": "SAST",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-076",
+      "category": "SAST",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-077",
+      "category": "SAST",
+      "cwe": "CWE-200",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-078",
+      "category": "SAST",
+      "cwe": "CWE-200",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-079",
+      "category": "SAST",
+      "cwe": "CWE-200",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-080",
+      "category": "SAST",
+      "cwe": "CWE-200",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-081",
+      "category": "SAST",
+      "cwe": "CWE-1104",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-082",
+      "category": "SAST",
+      "cwe": "CWE-1104",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SAST-083",
+      "category": "SAST",
+      "cwe": "CWE-1104",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SAST-084",
+      "category": "SAST",
+      "cwe": "CWE-1104",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SCA-001",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SCA-002",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SCA-003",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-004",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-005",
+      "category": "SCA",
+      "cwe": "CWE-94",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-006",
+      "category": "SCA",
+      "cwe": "CWE-94",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SCA-007",
+      "category": "SCA",
+      "cwe": "CWE-20",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-008",
+      "category": "SCA",
+      "cwe": "CWE-287",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-009",
+      "category": "SCA",
+      "cwe": "CWE-20",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SCA-010",
+      "category": "SCA",
+      "cwe": "CWE-732",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-011",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-012",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-013",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SCA-014",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-015",
+      "category": "SCA",
+      "cwe": "CWE-94",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-016",
+      "category": "SCA",
+      "cwe": "CWE-94",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-017",
+      "category": "SCA",
+      "cwe": "CWE-20",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-018",
+      "category": "SCA",
+      "cwe": "CWE-287",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-019",
+      "category": "SCA",
+      "cwe": "CWE-20",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-020",
+      "category": "SCA",
+      "cwe": "CWE-732",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SCA-021",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SCA-022",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-023",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-024",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-025",
+      "category": "SCA",
+      "cwe": "CWE-94",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-026",
+      "category": "SCA",
+      "cwe": "CWE-94",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-027",
+      "category": "SCA",
+      "cwe": "CWE-20",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-028",
+      "category": "SCA",
+      "cwe": "CWE-287",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-029",
+      "category": "SCA",
+      "cwe": "CWE-20",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SCA-030",
+      "category": "SCA",
+      "cwe": "CWE-732",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-031",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-032",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-033",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-034",
+      "category": "SCA",
+      "cwe": "CWE-502",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-035",
+      "category": "SCA",
+      "cwe": "CWE-94",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-036",
+      "category": "SCA",
+      "cwe": "CWE-94",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SCA-037",
+      "category": "SCA",
+      "cwe": "CWE-20",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-038",
+      "category": "SCA",
+      "cwe": "CWE-287",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-039",
+      "category": "SCA",
+      "cwe": "CWE-20",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SCA-040",
+      "category": "SCA",
+      "cwe": "CWE-732",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-001",
+      "category": "DAST",
+      "cwe": "CWE-89",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-002",
+      "category": "DAST",
+      "cwe": "CWE-89",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-DAST-003",
+      "category": "DAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-DAST-004",
+      "category": "DAST",
+      "cwe": "CWE-79",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-DAST-005",
+      "category": "DAST",
+      "cwe": "CWE-352",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-006",
+      "category": "DAST",
+      "cwe": "CWE-352",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-DAST-007",
+      "category": "DAST",
+      "cwe": "CWE-918",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-DAST-008",
+      "category": "DAST",
+      "cwe": "CWE-918",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-DAST-009",
+      "category": "DAST",
+      "cwe": "CWE-601",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-010",
+      "category": "DAST",
+      "cwe": "CWE-601",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-DAST-011",
+      "category": "DAST",
+      "cwe": "CWE-22",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-DAST-012",
+      "category": "DAST",
+      "cwe": "CWE-22",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-DAST-013",
+      "category": "DAST",
+      "cwe": "CWE-434",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-014",
+      "category": "DAST",
+      "cwe": "CWE-434",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-DAST-015",
+      "category": "DAST",
+      "cwe": "CWE-287",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-016",
+      "category": "DAST",
+      "cwe": "CWE-287",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": true,
+      "classification": "FALSE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-017",
+      "category": "DAST",
+      "cwe": "CWE-862",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-018",
+      "category": "DAST",
+      "cwe": "CWE-862",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-DAST-019",
+      "category": "DAST",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-DAST-020",
+      "category": "DAST",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-001",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-002",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-003",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-004",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-005",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-006",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-007",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-008",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-009",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-010",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-011",
+      "category": "SECRET",
+      "cwe": "CWE-321",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-012",
+      "category": "SECRET",
+      "cwe": "CWE-321",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-013",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-014",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-015",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-016",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-017",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-018",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-019",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-020",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-021",
+      "category": "SECRET",
+      "cwe": "CWE-321",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-022",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-023",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-024",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-025",
+      "category": "SECRET",
+      "cwe": "CWE-321",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-026",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-027",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-028",
+      "category": "SECRET",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-029",
+      "category": "SECRET",
+      "cwe": "CWE-321",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-SECRET-030",
+      "category": "SECRET",
+      "cwe": "CWE-321",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-001",
+      "category": "CONTAINER",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-002",
+      "category": "CONTAINER",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-003",
+      "category": "CONTAINER",
+      "cwe": "CWE-269",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-004",
+      "category": "CONTAINER",
+      "cwe": "CWE-269",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-005",
+      "category": "CONTAINER",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-006",
+      "category": "CONTAINER",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-007",
+      "category": "CONTAINER",
+      "cwe": "CWE-1104",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-008",
+      "category": "CONTAINER",
+      "cwe": "CWE-1104",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-009",
+      "category": "CONTAINER",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-010",
+      "category": "CONTAINER",
+      "cwe": "CWE-798",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-011",
+      "category": "CONTAINER",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-012",
+      "category": "CONTAINER",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": true,
+      "classification": "FALSE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-013",
+      "category": "CONTAINER",
+      "cwe": "CWE-1059",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-014",
+      "category": "CONTAINER",
+      "cwe": "CWE-1059",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-015",
+      "category": "CONTAINER",
+      "cwe": "CWE-703",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-016",
+      "category": "CONTAINER",
+      "cwe": "CWE-703",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-017",
+      "category": "CONTAINER",
+      "cwe": "CWE-1104",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-018",
+      "category": "CONTAINER",
+      "cwe": "CWE-1104",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-019",
+      "category": "CONTAINER",
+      "cwe": "CWE-732",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-CONTAINER-020",
+      "category": "CONTAINER",
+      "cwe": "CWE-732",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-001",
+      "category": "IAC",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-002",
+      "category": "IAC",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-003",
+      "category": "IAC",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-004",
+      "category": "IAC",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-005",
+      "category": "IAC",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-006",
+      "category": "IAC",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-007",
+      "category": "IAC",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-008",
+      "category": "IAC",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-009",
+      "category": "IAC",
+      "cwe": "CWE-311",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-010",
+      "category": "IAC",
+      "cwe": "CWE-311",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": true,
+      "classification": "FALSE_POSITIVE",
+      "severity_match": true,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-011",
+      "category": "IAC",
+      "cwe": "CWE-778",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-012",
+      "category": "IAC",
+      "cwe": "CWE-778",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-013",
+      "category": "IAC",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-014",
+      "category": "IAC",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-015",
+      "category": "IAC",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-016",
+      "category": "IAC",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-017",
+      "category": "IAC",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": false,
+      "classification": "FALSE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-018",
+      "category": "IAC",
+      "cwe": "CWE-250",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    },
+    {
+      "benchmark_id": "BENCH-IAC-019",
+      "category": "IAC",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_POSITIVE",
+      "actual_detected": true,
+      "classification": "TRUE_POSITIVE",
+      "severity_match": false,
+      "cwe_match": true
+    },
+    {
+      "benchmark_id": "BENCH-IAC-020",
+      "category": "IAC",
+      "cwe": "CWE-284",
+      "expected_detection": "TRUE_NEGATIVE",
+      "actual_detected": false,
+      "classification": "TRUE_NEGATIVE",
+      "severity_match": null,
+      "cwe_match": null
+    }
+  ]
+}

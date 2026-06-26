@@ -1,0 +1,16 @@
+# BENCH-CONT-023: Pod pulling from public registry without authentication
+# Tests: Registry exposure and access analysis
+apiVersion: v1
+kind: Pod
+metadata:
+  name: public-registry-pod
+  labels:
+    benchmark: container-registry-exposure
+spec:
+  containers:
+  - name: untrusted-app
+    image: untrusted-public-registry.io/app:latest
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 8080
+  # No imagePullSecrets configured — pulls from public registry without auth

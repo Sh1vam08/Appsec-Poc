@@ -1,0 +1,21 @@
+# BENCH-CONT-018: Container exposing sensitive database/service ports
+# Tests: Container network configuration analysis
+# Exposes ports commonly associated with databases and internal services
+# that should never be directly accessible.
+
+FROM alpine:3.18
+
+RUN apk add --no-cache curl
+
+# Expose sensitive service ports
+EXPOSE 22      # SSH
+EXPOSE 3306    # MySQL
+EXPOSE 5432    # PostgreSQL
+EXPOSE 6379    # Redis
+EXPOSE 27017   # MongoDB
+EXPOSE 9200    # Elasticsearch
+EXPOSE 2375    # Docker daemon (unencrypted)
+EXPOSE 8500    # Consul
+EXPOSE 4443    # Internal HTTPS
+
+ENTRYPOINT ["/bin/sh"]

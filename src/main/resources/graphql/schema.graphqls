@@ -1,0 +1,14 @@
+type Query {
+    # BENCH-DAST-097: GraphQL Introspection and IDOR
+    # Retrieves a product by ID without authorization checks.
+    product(id: ID!): Product
+}
+
+type Product {
+    id: ID!
+    name: String!
+    price: Float!
+    description: String
+    # Deeply nested field to test GraphQL DoS
+    relatedProducts: [Product]
+}

@@ -28,6 +28,23 @@ public class ProductCatalogRepository {
     }
 
     /**
+     * BENCH-SAST-081: Blind SQL Injection (Vulnerable Variant)
+     * Executes a concatenated query but only returns a boolean result,
+     * forcing tools to use boolean inference or time-delay to detect it.
+     */
+    public boolean checkUserExistsBlind(String username) {
+        // BENCH-SAST-081
+        String query = "SELECT COUNT(*) FROM users WHERE username = '" + username + "'";
+        try {
+            Number count = (Number) entityManager.createNativeQuery(query).getSingleResult();
+            return count.intValue() > 0;
+        } catch (Exception e) {
+            // Intentionally swallow exception to mimic blind conditions
+            return false;
+        }
+    }
+
+    /**
      * BENCH-SAST-002: SQL Injection (Safe Variant)
      * Uses JPA named parameters to secure the query against SQL Injection.
      */
@@ -43,7 +60,7 @@ public class ProductCatalogRepository {
      * BENCH-SAST-003: SQL Injection (Unreachable Variant)
      * This is a private query function that is never called by any endpoint.
      */
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "unchecked"})
     private List<User> searchUnreachable(String username) {
         // BENCH-SAST-003
         String query = "SELECT * FROM users WHERE username = '" + username + "'";

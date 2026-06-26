@@ -1,0 +1,28 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2026-06-26T12:00:00Z",
+    "creators": [
+      "Tool: BenchmarkGenerator"
+    ]
+  },
+  "name": "appsec-benchmark-external",
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "http://spdx.org/spdxdocs/appsec-benchmark-external-v1.0.0",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-1",
+      "name": "log4j-core",
+      "versionInfo": "2.14.0",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.0?type=jar"
+        }
+      ]
+    }
+  ]
+}

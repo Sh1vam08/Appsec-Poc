@@ -1,0 +1,29 @@
+# BENCH-CONT-011: Combined container misconfigurations
+# Tests: Container misconfiguration detection
+# Multiple misconfigs in one file: no HEALTHCHECK, writable sensitive dirs,
+# running as root, no signal handling, insecure temp directory.
+
+FROM alpine:3.18
+
+# No USER directive — runs as root
+# No HEALTHCHECK — no liveness/readiness probe
+
+# Writable sensitive directories
+RUN mkdir -p /etc/app && chmod 777 /etc/app
+RUN mkdir -p /var/secrets && chmod 777 /var/secrets
+
+# World-writable temp directory mounted as volume
+VOLUME ["/tmp"]
+
+# Install unnecessary SUID binaries
+RUN chmod u+s /bin/busybox
+
+# Expose multiple unnecessary ports
+EXPOSE 22
+EXPOSE 3306
+EXPOSE 5432
+EXPOSE 6379
+EXPOSE 27017
+
+# No signal handling — PID 1 is a shell
+ENTRYPOINT ["/bin/sh", "-c", "while true; do sleep 3600; done"]

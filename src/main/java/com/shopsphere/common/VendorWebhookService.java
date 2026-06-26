@@ -50,9 +50,10 @@ public class VendorWebhookService {
     }
 
     private String executeHttpRequest(String urlStr) {
+        HttpURLConnection conn = null;
         try {
             URL url = new URI(urlStr).toURL();
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setConnectTimeout(2500);
             conn.setReadTimeout(2500);
@@ -67,6 +68,34 @@ public class VendorWebhookService {
             }
         } catch (Exception e) {
             return "SSRF Connection attempted: " + e.getMessage();
+        } finally {
+            if (conn != null) {
+                conn.disconnect();
+            }
+        }
+    }
+
+    /**
+     * BENCH-DAST-099: Blind SSRF
+     * Discards the response.
+     */
+    public void fetchUrlBlind(String urlStr) {
+        repository.logRequest(urlStr);
+        // Execute request but discard response to simulate blind webhook
+        HttpURLConnection conn = null;
+        try {
+            URL url = new URI(urlStr).toURL();
+            conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setConnectTimeout(2500);
+            conn.setReadTimeout(2500);
+            conn.getInputStream().close();
+        } catch (Exception e) {
+            // Silently ignore
+        } finally {
+            if (conn != null) {
+                conn.disconnect();
+            }
         }
     }
 }

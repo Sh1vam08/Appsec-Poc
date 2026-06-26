@@ -1,0 +1,26 @@
+# BENCH-CONT-016: Multi-stage build with secret leaking across layers
+# Tests: Container layer analysis
+# Stage 1 contains credentials. Stage 2 accidentally copies the entire
+# build directory, including the credentials file, into the final image.
+
+FROM alpine:3.18 AS builder
+
+WORKDIR /build
+
+# Simulate downloading credentials during build
+RUN echo '{"api_key": "sk_live_REAL_PRODUCTION_KEY_12345", "db_password": "ProductionDBPass!"}' > /build/credentials.json
+RUN echo 'PRIVATE_TOKEN=ghp_RealGitHubTokenThatShouldNotLeak123456' > /build/.env
+
+# Simulate building the application
+RUN echo "building app..." > /build/app.bin
+RUN chmod +x /build/app.bin
+
+# --- Stage 2: Runtime ---
+FROM alpine:3.18
+
+WORKDIR /app
+
+# BUG: Copies EVERYTHING from /build, including credentials.json and .env
+COPY --from=builder /build/ /app/
+
+ENTRYPOINT ["/bin/sh"]

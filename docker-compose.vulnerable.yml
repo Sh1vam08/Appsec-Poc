@@ -1,0 +1,54 @@
+# Vulnerable Docker Compose configuration
+# Tests multiple Container capabilities:
+# - Container misconfiguration detection (privileged, pid: host)
+# - Image integrity verification (untrusted registry, no digest)
+# - Registry exposure and access analysis (public registry, no auth)
+# - Container network configuration analysis (network_mode: host)
+# - Container privilege and execution analysis (cap_add: ALL)
+
+version: '3.8'
+
+services:
+
+  # BENCH-CONT-020: Privileged container with host PID namespace
+  vulnerable-privileged:
+    image: alpine:3.18
+    container_name: vuln-privileged
+    privileged: true
+    pid: "host"
+    network_mode: "host"
+    cap_add:
+      - ALL
+    security_opt:
+      - no-new-privileges:false
+      - apparmor:unconfined
+    volumes:
+      - /:/host-root:rw
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DB_PASSWORD=ProductionPassword123!
+      - API_SECRET=sk_live_SecretKeyInCompose
+    entrypoint: ["/bin/sh", "-c", "sleep 3600"]
+
+  # BENCH-CONT-021: Image from untrusted public registry without auth
+  vulnerable-untrusted-image:
+    image: untrusted-registry.io/malicious-app:latest
+    container_name: vuln-untrusted
+    ports:
+      - "0.0.0.0:8080:8080"
+      - "0.0.0.0:22:22"
+      - "0.0.0.0:3306:3306"
+    restart: always
+
+  # BENCH-CONT-022: Local registry exposed without TLS
+  vulnerable-registry:
+    image: registry:2
+    container_name: vuln-registry
+    ports:
+      - "0.0.0.0:5000:5000"
+    environment:
+      - REGISTRY_HTTP_TLS_CERTIFICATE=""
+      - REGISTRY_HTTP_TLS_KEY=""
+    # No authentication configured
+    # No TLS configured
+    # Exposed on all interfaces

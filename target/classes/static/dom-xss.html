@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to ShopSphere</title>
+</head>
+<body>
+    <h1>ShopSphere Dashboard</h1>
+    <div id="welcome-message"></div>
+
+    <script>
+        // BENCH-DAST-106: DOM-Based XSS (Vulnerable Variant)
+        // Dynamically reads the URL hash and injects it unsafely into the DOM.
+        // Attack vector: http://localhost:8080/dom-xss.html#<img src=x onerror=alert(1)>
+        window.onload = function() {
+            var hash = decodeURIComponent(window.location.hash.substring(1));
+            if (hash) {
+                // Vulnerable Sink: innerHTML used with unvalidated client-side input
+                document.getElementById('welcome-message').innerHTML = "Welcome back, " + hash + "!";
+            } else {
+                document.getElementById('welcome-message').innerText = "Welcome back, Guest!";
+            }
+        };
+    </script>
+</body>
+</html>

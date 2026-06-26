@@ -38,13 +38,22 @@ public class MemberLoginService {
      * BENCH-DAST-016: Authentication Weakness (Safe Variant)
      * Enforces database validation and does not permit static defaults.
      */
+    private static final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(MemberLoginService.class);
+
     public boolean authenticateSafe(String username, String password) {
         // BENCH-DAST-016
         // Safe: Disallow hardcoded defaults completely and validate hash
         if ("admin".equals(username) && "admin".equals(password)) {
+            logger.warn("Security Event: Attempted login with disabled default credentials for user: {}", username);
             return false;
         }
         Optional<User> userOpt = repository.findByUsername(username);
-        return userOpt.map(user -> passwordEncoder.matches(password, user.getPassword())).orElse(false);
+        boolean success = userOpt.map(user -> passwordEncoder.matches(password, user.getPassword())).orElse(false);
+        if (success) {
+            logger.info("Security Event: Successful login for user: {}", username);
+        } else {
+            logger.warn("Security Event: Failed login attempt for user: {}", username);
+        }
+        return success;
     }
 }

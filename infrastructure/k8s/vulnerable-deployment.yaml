@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shopsphere-backend
+  labels:
+    app: shopsphere
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shopsphere
+  template:
+    metadata:
+      labels:
+        app: shopsphere
+    spec:
+      # BENCH-IAC-001: Host Network Enabled (Vulnerable)
+      hostNetwork: true
+      containers:
+      - name: shopsphere-app
+        image: shopsphere/benchmark:latest
+        ports:
+        - containerPort: 8080
+        # BENCH-IAC-002: Missing Resource Limits (Vulnerable)
+        # resources:
+        #   limits:
+        #     cpu: "1"
+        #     memory: "1Gi"
+        securityContext:
+          # BENCH-IAC-003: Privileged Container (Vulnerable)
+          privileged: true
+          # BENCH-IAC-004: Running as Root (Vulnerable)
+          runAsUser: 0
+          allowPrivilegeEscalation: true

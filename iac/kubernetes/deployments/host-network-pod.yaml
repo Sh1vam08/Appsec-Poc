@@ -1,0 +1,22 @@
+# BENCH-CONT-024: Pod with hostNetwork enabled
+# Tests: Container network configuration analysis
+apiVersion: v1
+kind: Pod
+metadata:
+  name: host-network-pod
+  labels:
+    benchmark: container-network-config
+spec:
+  hostNetwork: true
+  hostPID: true
+  hostIPC: true
+  containers:
+  - name: network-app
+    image: alpine:3.18
+    ports:
+    - containerPort: 8080
+      hostPort: 8080
+    - containerPort: 22
+      hostPort: 22
+    securityContext:
+      privileged: false

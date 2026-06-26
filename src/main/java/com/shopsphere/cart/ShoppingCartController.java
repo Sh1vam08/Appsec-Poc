@@ -24,8 +24,12 @@ public class ShoppingCartController {
      * Maps to: POST /api/dast/vulnerable/csrf
      */
     @PostMapping("/api/v1/cart/items")
-    public org.springframework.web.servlet.view.RedirectView updateEmailVulnerable(@RequestParam String email) {
+    public org.springframework.web.servlet.view.RedirectView updateEmailVulnerable(@RequestParam String email, jakarta.servlet.http.HttpServletRequest request) {
         // BENCH-DAST-005
+        jakarta.servlet.http.HttpSession session = request.getSession(false);
+        if (session == null || session.getAttribute("USER") == null) {
+            return new org.springframework.web.servlet.view.RedirectView("/?error=unauthorized");
+        }
         service.updateEmail(email);
         return new org.springframework.web.servlet.view.RedirectView("/?cartAdded=true");
     }
@@ -37,8 +41,13 @@ public class ShoppingCartController {
     @PostMapping("/api/v1/cart/items/secure")
     public ResponseEntity<String> updateEmailSafe(
             @RequestParam String email,
-            @RequestHeader(value = "X-CSRF-TOKEN", required = false) String token) {
+            @RequestHeader(value = "X-CSRF-TOKEN", required = false) String token,
+            jakarta.servlet.http.HttpServletRequest request) {
         // BENCH-DAST-006
+        jakarta.servlet.http.HttpSession session = request.getSession(false);
+        if (session == null || session.getAttribute("USER") == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Unauthorized: Active session required.");
+        }
         if (token == null || !token.equals(CSRF_TOKEN)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("CSRF validation failed: Missing or invalid X-CSRF-TOKEN header.");
         }

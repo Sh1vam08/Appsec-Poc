@@ -1,0 +1,20 @@
+{
+  "matrix": [
+    [
+      102,
+      40
+    ],
+    [
+      8,
+      64
+    ]
+  ],
+  "row_labels": [
+    "Actually Vulnerable",
+    "Actually Safe"
+  ],
+  "col_labels": [
+    "Predicted Positive",
+    "Predicted Negative"
+  ]
+}

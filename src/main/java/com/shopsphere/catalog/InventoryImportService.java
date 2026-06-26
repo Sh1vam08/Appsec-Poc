@@ -24,6 +24,10 @@ public class InventoryImportService {
         // BENCH-SAST-021
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            // Explicitly enable external entities (overriding modern Java secure defaults) to ensure exploitability
+            dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", true);
+            dbf.setFeature("http://xml.org/sax/features/external-general-entities", true);
+            dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", true);
             // Vulnerable: no protection features disabled
             DocumentBuilder db = dbf.newDocumentBuilder();
             Document doc = db.parse(new InputSource(new StringReader(xmlContent)));
@@ -66,6 +70,9 @@ public class InventoryImportService {
         // BENCH-SAST-023
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", true);
+            dbf.setFeature("http://xml.org/sax/features/external-general-entities", true);
+            dbf.setFeature("http://xml.org/sax/features/external-parameter-entities", true);
             DocumentBuilder db = dbf.newDocumentBuilder();
             db.parse(new InputSource(new StringReader(xmlContent)));
         } catch (Exception e) {

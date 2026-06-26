@@ -21,10 +21,11 @@ public class ProductImageImportService {
     public String requestVulnerable(String urlString) {
         // BENCH-SAST-041
         StringBuilder result = new StringBuilder();
+        HttpURLConnection conn = null;
         try {
             // Sink: raw URL connection instantiation
             URL url = new URL(urlString);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setConnectTimeout(2000);
             conn.setReadTimeout(2000);
@@ -37,6 +38,10 @@ public class ProductImageImportService {
             }
         } catch (Exception e) {
             result.append("SSRF Connection Failed (Expected fallback): ").append(e.getMessage());
+        } finally {
+            if (conn != null) {
+                conn.disconnect();
+            }
         }
         return result.toString();
     }
@@ -53,9 +58,10 @@ public class ProductImageImportService {
         }
 
         StringBuilder result = new StringBuilder();
+        HttpURLConnection conn = null;
         try {
             URL url = new URL(urlString);
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn = (HttpURLConnection) url.openConnection();
             try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
@@ -64,6 +70,10 @@ public class ProductImageImportService {
             }
         } catch (Exception e) {
             result.append("Safe Connection Complete: ").append(e.getMessage());
+        } finally {
+            if (conn != null) {
+                conn.disconnect();
+            }
         }
         return result.toString();
     }
@@ -75,11 +85,17 @@ public class ProductImageImportService {
     @SuppressWarnings("unused")
     private String requestUnreachable(String urlString) {
         // BENCH-SAST-043
+        HttpURLConnection conn = null;
         try {
             URL url = new URL(urlString);
-            url.openConnection().getInputStream().close();
+            conn = (HttpURLConnection) url.openConnection();
+            conn.getInputStream().close();
         } catch (Exception e) {
             // ignore
+        } finally {
+            if (conn != null) {
+                conn.disconnect();
+            }
         }
         return "";
     }
@@ -91,6 +107,7 @@ public class ProductImageImportService {
      */
     public String requestFrameworkProtected(String urlString) {
         // BENCH-SAST-044
+        HttpURLConnection conn = null;
         try {
             URL url = new URL(urlString);
             String host = url.getHost();
@@ -101,12 +118,16 @@ public class ProductImageImportService {
                 return "SSRF Warning: Access to internal IP space blocked.";
             }
 
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn = (HttpURLConnection) url.openConnection();
             conn.setInstanceFollowRedirects(false); // Disable redirect following to prevent bypasses
             conn.getInputStream().close();
             return "Framework-Protected connection completed successfully.";
         } catch (Exception e) {
             return "SSRF Connection blocked or failed: " + e.getMessage();
+        } finally {
+            if (conn != null) {
+                conn.disconnect();
+            }
         }
     }
 }

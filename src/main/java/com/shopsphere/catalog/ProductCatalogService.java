@@ -23,6 +23,10 @@ public class ProductCatalogService {
         return sqlInjectionRepository.searchVulnerable(username);
     }
 
+    public boolean checkUserExistsBlind(String username) {
+        return sqlInjectionRepository.checkUserExistsBlind(username);
+    }
+
     public List<User> searchSafe(String username) {
         return sqlInjectionRepository.searchSafe(username);
     }

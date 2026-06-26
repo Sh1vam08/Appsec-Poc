@@ -194,6 +194,18 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Spring Boot GraphQL (for GraphQL API testing) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-graphql</artifactId>
+        </dependency>
+
+        <!-- Spring Boot WebSocket (for CSWSH testing) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
         <!-- Spring Security Test -->
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -286,6 +298,38 @@
             <artifactId>itextpdf</artifactId>
             <version>5.5.13.3</version>
         </dependency>
+
+        <!-- BENCH-SCA-012: Transitive Vulnerability Test
+             commons-beanutils 1.9.3 is safe itself, but it transitively depends on
+             commons-collections 3.2.1 which has CVE-2015-6420 (Deserialization RCE).
+             Tests: Transitive dependency analysis capability. -->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.3</version>
+        </dependency>
+
+        <!-- BENCH-SCA-013: Dependency Confusion Test
+             This references a fake internal company package that does NOT exist
+             in Maven Central. Tests: Dependency confusion detection capability.
+             An SCA tool should flag the risk of a public package hijacking this name. -->
+        <!--
+        <dependency>
+            <groupId>com.internal.benchmark</groupId>
+            <artifactId>security-utils</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        -->
+
+        <!-- BENCH-SCA-014: GPL License Compliance Test
+             GNU Classpath is licensed under GPL. Including it in a proprietary
+             project could create license compliance issues.
+             Tests: License compliance analysis, License conflict detection -->
+        <dependency>
+            <groupId>org.gnu</groupId>
+            <artifactId>gnu-crypto</artifactId>
+            <version>2.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -344,6 +388,27 @@
             <artifactId>itextpdf</artifactId>
             <version>5.5.13.3</version>
         </dependency>
+        
+        <!-- BENCH-SCA-012: Dependency Confusion / Internal Package Hijacking -->
+        <!-- This package doesn't exist on Maven Central but SCA tools should warn about 
+             the risk of an attacker registering it publicly. -->
+        <dependency>
+            <groupId>com.shopsphere.internal.utils</groupId>
+            <artifactId>shopsphere-core-utils</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- BENCH-SCA-015: Typosquatting Test -->
+        <!-- This package is deliberately misspelled (fasterxmll instead of fasterxml) 
+             to test typosquatting detection. System scope is used to prevent build failures. -->
+        <dependency>
+            <groupId>com.fasterxmll.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/typo.jar</systemPath>
+        </dependency>
+
     </dependencies>
         </profile>
     </profiles>

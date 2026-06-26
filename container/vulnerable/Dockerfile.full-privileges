@@ -1,0 +1,25 @@
+# BENCH-CONT-019: Container with full privileges and dangerous capabilities
+# Tests: Container privilege and execution analysis
+# Runs as root with ALL Linux capabilities added.
+
+FROM ubuntu:22.04
+
+# Run as root explicitly
+USER root
+
+# Install tools that require elevated privileges
+RUN apt-get update && apt-get install -y \
+    iproute2 \
+    tcpdump \
+    strace \
+    iptables \
+    kmod \
+    && rm -rf /var/lib/apt/lists/*
+
+# World-writable sensitive system directories
+RUN chmod 777 /etc /var /usr/bin
+
+# Set SUID on sensitive binaries
+RUN chmod u+s /usr/bin/find /usr/bin/env
+
+ENTRYPOINT ["/bin/bash"]

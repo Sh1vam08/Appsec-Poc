@@ -38,4 +38,27 @@ public class VendorWebhookController {
         // BENCH-DAST-008
         return service.fetchUrlSafe(url);
     }
+
+    /**
+     * BENCH-DAST-099: Blind SSRF
+     * Maps to: POST /api/v1/vendors/webhooks/blind
+     * Discards the response, forcing the DAST tool to use Out-of-Band (OAST) techniques.
+     */
+    @PostMapping("/api/v1/vendors/webhooks/blind")
+    public String postBlind(@RequestParam String url) {
+        // BENCH-DAST-099
+        service.fetchUrlBlind(url);
+        return "Webhook dispatched successfully.";
+    }
+
+    /**
+     * BENCH-DAST-100: Cloud Metadata SSRF
+     * Maps to: POST /api/v1/vendors/webhooks/metadata
+     * Attempts to read AWS metadata if the attacker provides 169.254.169.254.
+     */
+    @PostMapping("/api/v1/vendors/webhooks/metadata")
+    public String postMetadata(@RequestParam String url) {
+        // BENCH-DAST-100
+        return service.fetchUrlVulnerable(url);
+    }
 }

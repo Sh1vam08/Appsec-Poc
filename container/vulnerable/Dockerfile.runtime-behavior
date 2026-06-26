@@ -1,0 +1,17 @@
+# BENCH-CONT-017: Container with unsafe runtime behavior
+# Tests: Container runtime behavior analysis
+# Uses an entrypoint that evaluates user input and spawns background processes.
+
+FROM alpine:3.18
+
+RUN apk add --no-cache curl bash
+
+WORKDIR /app
+COPY entrypoint-unsafe.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
+# User-controlled environment variable that gets eval'd in entrypoint
+ENV APP_CONFIG="echo 'default config'"
+ENV REMOTE_INIT_SCRIPT=""
+
+ENTRYPOINT ["/app/entrypoint.sh"]

@@ -1,0 +1,19 @@
+# Safe Dockerfile with full OCI provenance metadata
+# Contrast with container/vulnerable/Dockerfile.no-provenance
+
+FROM alpine:3.18
+
+LABEL maintainer="security-team@example.com"
+LABEL org.opencontainers.image.title="AppSec Benchmark Safe Image"
+LABEL org.opencontainers.image.description="A properly labeled container image with full provenance"
+LABEL org.opencontainers.image.version="1.0.0"
+LABEL org.opencontainers.image.vendor="Example Corp"
+LABEL org.opencontainers.image.source="https://github.com/example/appsec-benchmark"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.created="2024-01-01T00:00:00Z"
+
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser
+WORKDIR /app
+HEALTHCHECK --interval=30s --timeout=5s CMD ["true"]
+ENTRYPOINT ["/bin/sh"]

@@ -1,0 +1,18 @@
+{
+  "labels": [
+    "Fix Generation",
+    "Remediation Guidance",
+    "Root Cause Analysis",
+    "Reachability Analysis",
+    "Prioritization",
+    "Risk Ranking"
+  ],
+  "scores": [
+    0.731707,
+    0.70297,
+    0.70297,
+    0.508065,
+    0.476636,
+    0.476636
+  ]
+}

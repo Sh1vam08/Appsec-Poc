@@ -1,0 +1,26 @@
+# BENCH-CONT-010: Bloated container image with unnecessary dev packages
+# Tests: Container image composition analysis
+# A scanner should flag the outdated base image, unnecessary packages,
+# and the large attack surface created by dev tools in a production image.
+
+FROM ubuntu:14.04
+
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    make \
+    curl \
+    wget \
+    netcat \
+    telnet \
+    nmap \
+    python2.7 \
+    git \
+    openssh-server \
+    vim \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY . /app
+
+ENTRYPOINT ["/bin/bash"]
