@@ -3,6 +3,7 @@ package com.shopsphere.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.core.annotation.Order;
 
@@ -17,6 +18,11 @@ public class SecurityHeadersConfig {
     @Order(100) // Execute after primary auth configs
     public SecurityFilterChain headerFilterChain(HttpSecurity http) throws Exception {
         http
+            // This @Order(100) chain has no securityMatcher, so it matches every request and
+            // shadows the primary SecurityConfig chain. CSRF must be disabled here too, or every
+            // state-changing request (POST/PUT/DELETE) is blocked with 403 before reaching the
+            // intentionally-vulnerable endpoints -- which breaks the benchmark's DAST surface.
+            .csrf(AbstractHttpConfigurer::disable)
             .headers(headers -> headers
                 .frameOptions(frameOptions -> frameOptions.disable()) // Vulnerable to Clickjacking
                 .xssProtection(xssProtection -> xssProtection.disable()) // Disables browser XSS protection

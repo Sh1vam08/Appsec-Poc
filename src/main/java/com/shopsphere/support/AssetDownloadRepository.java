@@ -12,7 +12,11 @@ import java.nio.file.Files;
 @Repository
 public class AssetDownloadRepository {
 
-    private final String baseDir = new File("src/main/resources").getAbsolutePath();
+    // Use the actual process working directory as the traversal base. When the app runs as a
+    // packaged jar (e.g. in the container, workdir /app), "src/main/resources" does not exist, so
+    // the OS cannot resolve a "../" path from a non-existent base and the seeded path-traversal
+    // flaw becomes unreachable. user.dir always exists, keeping the vulnerable read exercisable.
+    private final String baseDir = new File(System.getProperty("user.dir")).getAbsolutePath();
 
     public String getBaseDirectory() {
         return baseDir;
